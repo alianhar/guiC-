@@ -1,0 +1,12 @@
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\bin\Debug\toko_laptop_tugas.exe
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\bin\Debug\toko_laptop_tugas.pdb
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Properties.Resources.resources
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.csproj.GenerateResource.Cache
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.exe
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.pdb
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Login.resources
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Home.resources
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Pegawai.resources
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Customer.resources
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Produk.resources
+E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.csprojResolveAssemblyReference.cache
