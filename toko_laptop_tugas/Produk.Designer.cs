@@ -32,24 +32,25 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.CatPrCmb = new System.Windows.Forms.ComboBox();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.EditBtn = new System.Windows.Forms.Button();
+            this.SaveBtn = new System.Windows.Forms.Button();
+            this.PrPriceTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PrStokTb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PrNameTb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.EmpNameLbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductsDGV = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -63,13 +64,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -97,20 +97,21 @@
             this.button3.TabIndex = 63;
             this.button3.Text = "Pegawai";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightCyan;
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Controls.Add(this.button9);
-            this.panel4.Controls.Add(this.button8);
-            this.panel4.Controls.Add(this.button7);
-            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Controls.Add(this.CatPrCmb);
+            this.panel4.Controls.Add(this.DeleteBtn);
+            this.panel4.Controls.Add(this.EditBtn);
+            this.panel4.Controls.Add(this.SaveBtn);
+            this.panel4.Controls.Add(this.PrPriceTb);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.PrStokTb);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.PrNameTb);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(12, 73);
@@ -118,52 +119,68 @@
             this.panel4.Size = new System.Drawing.Size(916, 167);
             this.panel4.TabIndex = 1;
             // 
-            // button9
+            // CatPrCmb
             // 
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(511, 122);
-            this.button9.Name = "button9";
-            this.button9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button9.Size = new System.Drawing.Size(113, 26);
-            this.button9.TabIndex = 18;
-            this.button9.Text = "Delete";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button9.UseVisualStyleBackColor = true;
+            this.CatPrCmb.FormattingEnabled = true;
+            this.CatPrCmb.Items.AddRange(new object[] {
+            "spare_part_pc",
+            "laptop",
+            "hardware",
+            "gadget"});
+            this.CatPrCmb.Location = new System.Drawing.Point(225, 69);
+            this.CatPrCmb.Name = "CatPrCmb";
+            this.CatPrCmb.Size = new System.Drawing.Size(194, 21);
+            this.CatPrCmb.TabIndex = 19;
             // 
-            // button8
+            // DeleteBtn
             // 
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(377, 122);
-            this.button8.Name = "button8";
-            this.button8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button8.Size = new System.Drawing.Size(113, 26);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "Edit";
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button8.UseVisualStyleBackColor = true;
+            this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DeleteBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteBtn.Location = new System.Drawing.Point(511, 122);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DeleteBtn.Size = new System.Drawing.Size(113, 26);
+            this.DeleteBtn.TabIndex = 18;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
-            // button7
+            // EditBtn
             // 
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(225, 122);
-            this.button7.Name = "button7";
-            this.button7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button7.Size = new System.Drawing.Size(113, 26);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "Save";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button7.UseVisualStyleBackColor = true;
+            this.EditBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.EditBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EditBtn.Location = new System.Drawing.Point(377, 122);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.EditBtn.Size = new System.Drawing.Size(113, 26);
+            this.EditBtn.TabIndex = 17;
+            this.EditBtn.Text = "Edit";
+            this.EditBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EditBtn.UseVisualStyleBackColor = true;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
-            // textBox4
+            // SaveBtn
             // 
-            this.textBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(656, 66);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 25);
-            this.textBox4.TabIndex = 9;
+            this.SaveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SaveBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SaveBtn.Location = new System.Drawing.Point(225, 122);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SaveBtn.Size = new System.Drawing.Size(113, 26);
+            this.SaveBtn.TabIndex = 16;
+            this.SaveBtn.Text = "Save";
+            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
+            // PrPriceTb
+            // 
+            this.PrPriceTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrPriceTb.Location = new System.Drawing.Point(656, 66);
+            this.PrPriceTb.Name = "PrPriceTb";
+            this.PrPriceTb.Size = new System.Drawing.Size(178, 25);
+            this.PrPriceTb.TabIndex = 9;
             // 
             // label7
             // 
@@ -175,13 +192,13 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Harga";
             // 
-            // textBox3
+            // PrStokTb
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(446, 66);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(178, 25);
-            this.textBox3.TabIndex = 7;
+            this.PrStokTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrStokTb.Location = new System.Drawing.Point(446, 66);
+            this.PrStokTb.Name = "PrStokTb";
+            this.PrStokTb.Size = new System.Drawing.Size(178, 25);
+            this.PrStokTb.TabIndex = 7;
             // 
             // label5
             // 
@@ -193,13 +210,13 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Kategori";
             // 
-            // textBox1
+            // PrNameTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(29, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 25);
-            this.textBox1.TabIndex = 3;
+            this.PrNameTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrNameTb.Location = new System.Drawing.Point(29, 66);
+            this.PrNameTb.Name = "PrNameTb";
+            this.PrNameTb.Size = new System.Drawing.Size(178, 25);
+            this.PrNameTb.TabIndex = 3;
             // 
             // label4
             // 
@@ -221,15 +238,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Input Data Produk";
             // 
-            // label1
+            // EmpNameLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(962, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 19);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "EmpName";
+            this.EmpNameLbl.AutoSize = true;
+            this.EmpNameLbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpNameLbl.Location = new System.Drawing.Point(962, 18);
+            this.EmpNameLbl.Name = "EmpNameLbl";
+            this.EmpNameLbl.Size = new System.Drawing.Size(88, 19);
+            this.EmpNameLbl.TabIndex = 48;
+            this.EmpNameLbl.Text = "EmpName";
             // 
             // panel3
             // 
@@ -245,9 +262,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(24, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 19);
+            this.label2.Size = new System.Drawing.Size(147, 19);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Anjay PC STORE";
+            this.label2.Text = "Bunny PC STORE";
             // 
             // panel2
             // 
@@ -268,6 +285,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 47;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // button1
             // 
@@ -281,11 +299,12 @@
             this.button1.Text = "Home";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.ProductsDGV);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
@@ -294,13 +313,14 @@
             this.panel1.Size = new System.Drawing.Size(944, 565);
             this.panel1.TabIndex = 49;
             // 
-            // dataGridView1
+            // ProductsDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 280);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(909, 270);
-            this.dataGridView1.TabIndex = 4;
+            this.ProductsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductsDGV.Location = new System.Drawing.Point(19, 280);
+            this.ProductsDGV.Name = "ProductsDGV";
+            this.ProductsDGV.Size = new System.Drawing.Size(909, 270);
+            this.ProductsDGV.TabIndex = 4;
+            this.ProductsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsDGV_CellContentClick);
             // 
             // label8
             // 
@@ -347,6 +367,7 @@
             this.button6.TabIndex = 60;
             this.button6.Text = "Sign Out";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox6
             // 
@@ -417,6 +438,7 @@
             this.button5.TabIndex = 53;
             this.button5.Text = "Billings";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -426,14 +448,7 @@
             this.button4.TabIndex = 52;
             this.button4.Text = "Pelanggan";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(225, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(194, 21);
-            this.comboBox1.TabIndex = 19;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Produk
             // 
@@ -442,7 +457,7 @@
             this.BackColor = System.Drawing.Color.Chocolate;
             this.ClientSize = new System.Drawing.Size(1134, 559);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.EmpNameLbl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
@@ -469,7 +484,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -487,24 +502,24 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button DeleteBtn;
+        private System.Windows.Forms.Button EditBtn;
+        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.TextBox PrPriceTb;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PrStokTb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PrNameTb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label EmpNameLbl;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ProductsDGV;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button2;
@@ -518,7 +533,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CatPrCmb;
 
 
     }

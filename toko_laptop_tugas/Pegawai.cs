@@ -15,6 +15,7 @@ namespace toko_laptop_tugas
         public Pegawai()
         {
             InitializeComponent();
+            EmpNameLbl.Text = Login.EmpName;
             DisplayEmployees();
         }
         
@@ -102,6 +103,114 @@ namespace toko_laptop_tugas
             {
                 key = Convert.ToInt32(row.Cells[0].Value);
             }
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            if (EmpNameTb.Text == "" || EmpAddTb.Text == "" || EmpPhoneTb.Text == "" || EmpDOB.Text == "" || PasswordTb.Text == "")
+            {
+                MessageBox.Show("Data tidak Boleh Kosong!");
+            }
+            else
+            {
+                try
+                {
+                    Conn.Open();
+                    SqlCommand cmd = new SqlCommand("UPDATE EmployeeTbl SET EmpName=@EN,EmpAdd=@EA,EmpDOB=@ED,EmpPhone=@EP,EmpPass=@EPa WHERE EmpNum =@EKey",Conn);
+                    cmd.Parameters.AddWithValue("@EN", EmpNameTb.Text);
+                    cmd.Parameters.AddWithValue("@EA", EmpAddTb.Text);
+                    cmd.Parameters.AddWithValue("@ED", EmpDOB.Value.Date);
+                    cmd.Parameters.AddWithValue("@EP", EmpPhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@EPa", PasswordTb.Text);
+                    cmd.Parameters.AddWithValue("@Ekey", key);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Berhasil Mengedit Pegawai");
+                    Conn.Close();
+                    DisplayEmployees();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("pilih data terlebih dahulu!");
+            }
+            else
+            {
+                try
+                {
+                    Conn.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE FROM EmployeeTbl WHERE EmpNum=@EmpKey", Conn);
+
+                    cmd.Parameters.AddWithValue("@Empkey", key);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Berhasil Menghapus Pegawai");
+                    Conn.Close();
+                    DisplayEmployees();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void btnMenuPelanggan_Click(object sender, EventArgs e)
+        {
+            Customer customerPegawai = new Customer();
+            customerPegawai.Show();
+            this.Hide();
+        }
+
+        private void btnMenuProduk_Click(object sender, EventArgs e)
+        {
+            Produk produkPegawai = new Produk();
+            produkPegawai.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Home homePegawai = new Home();
+            homePegawai.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Billing billingPegawai = new Billing();
+            billingPegawai.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Kosongkan variabel static agar tidak menyimpan sesi login sebelumnya
+            Login.EmpName = null;
+
+            // Tampilkan form login kembali
+            Login loginForm = new Login();
+            loginForm.Show();
+
+            // Tutup form Home
+            this.Close();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Profile profilePegawai = new Profile();
+            profilePegawai.Show();
+            this.Hide();
         }
     }
 }

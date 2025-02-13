@@ -38,14 +38,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnMenuPelanggan = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.EmpNameLbl = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMenuProduk = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.EmployeesDGV = new System.Windows.Forms.DataGridView();
@@ -100,6 +100,7 @@
             this.button6.TabIndex = 26;
             this.button6.Text = "Sign Out";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox6
             // 
@@ -170,15 +171,17 @@
             this.button5.TabIndex = 19;
             this.button5.Text = "Billings";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btnMenuPelanggan
             // 
-            this.button4.Location = new System.Drawing.Point(44, 277);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 39);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Pelanggan";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnMenuPelanggan.Location = new System.Drawing.Point(44, 277);
+            this.btnMenuPelanggan.Name = "btnMenuPelanggan";
+            this.btnMenuPelanggan.Size = new System.Drawing.Size(113, 39);
+            this.btnMenuPelanggan.TabIndex = 18;
+            this.btnMenuPelanggan.Text = "Pelanggan";
+            this.btnMenuPelanggan.UseVisualStyleBackColor = true;
+            this.btnMenuPelanggan.Click += new System.EventHandler(this.btnMenuPelanggan_Click);
             // 
             // button3
             // 
@@ -212,19 +215,19 @@
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(24, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 19);
+            this.label2.Size = new System.Drawing.Size(147, 19);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Anjay PC STORE";
+            this.label2.Text = "Bunny PC STORE";
             // 
-            // label1
+            // EmpNameLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(961, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "EmpName";
+            this.EmpNameLbl.AutoSize = true;
+            this.EmpNameLbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpNameLbl.Location = new System.Drawing.Point(961, 18);
+            this.EmpNameLbl.Name = "EmpNameLbl";
+            this.EmpNameLbl.Size = new System.Drawing.Size(88, 19);
+            this.EmpNameLbl.TabIndex = 1;
+            this.EmpNameLbl.Text = "EmpName";
             // 
             // pictureBox8
             // 
@@ -235,15 +238,17 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
-            // button2
+            // btnMenuProduk
             // 
-            this.button2.Location = new System.Drawing.Point(44, 135);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 39);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Products";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMenuProduk.Location = new System.Drawing.Point(44, 135);
+            this.btnMenuProduk.Name = "btnMenuProduk";
+            this.btnMenuProduk.Size = new System.Drawing.Size(113, 39);
+            this.btnMenuProduk.TabIndex = 16;
+            this.btnMenuProduk.Text = "Products";
+            this.btnMenuProduk.UseVisualStyleBackColor = true;
+            this.btnMenuProduk.Click += new System.EventHandler(this.btnMenuProduk_Click);
             // 
             // button1
             // 
@@ -257,6 +262,7 @@
             this.button1.Text = "Home";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -340,6 +346,7 @@
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // EditBtn
             // 
@@ -353,6 +360,7 @@
             this.EditBtn.Text = "Edit";
             this.EditBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EditBtn.UseVisualStyleBackColor = true;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // SaveBtn
             // 
@@ -467,7 +475,7 @@
             this.BackColor = System.Drawing.Color.Chocolate;
             this.ClientSize = new System.Drawing.Size(1134, 559);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.EmpNameLbl);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox6);
@@ -477,8 +485,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnMenuPelanggan);
+            this.Controls.Add(this.btnMenuProduk);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
@@ -519,14 +527,14 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMenuPelanggan;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label EmpNameLbl;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMenuProduk;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;

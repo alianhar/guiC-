@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\file vscode\\toko_laptop_tugas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\produk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\produk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\pegawai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\pegawai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Profile.cs [Design]",
+              "DocumentMoniker": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Profile.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Profile.cs",
+              "ToolTip": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Profile.cs [Design]",
+              "RelativeToolTip": "toko_laptop_tugas\\Profile.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T16:08:58.106Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Produk.cs [Design]",
+              "DocumentMoniker": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Produk.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Produk.cs",
+              "ToolTip": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Produk.cs [Design]",
+              "RelativeToolTip": "toko_laptop_tugas\\Produk.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T16:08:47.463Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pegawai.cs [Design]",
+              "DocumentMoniker": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Pegawai.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Pegawai.cs",
+              "ToolTip": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Pegawai.cs [Design]",
+              "RelativeToolTip": "toko_laptop_tugas\\Pegawai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T16:08:40.738Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Home.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Home.cs",
+              "ToolTip": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Home.cs [Design]",
+              "RelativeToolTip": "toko_laptop_tugas\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T16:08:17.562Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Program.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Program.cs",
+              "ToolTip": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Program.cs",
+              "RelativeToolTip": "toko_laptop_tugas\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T04:55:06.968Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
