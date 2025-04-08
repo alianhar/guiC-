@@ -3,8 +3,52 @@
   "WorkspaceRootPath": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\projects\\gui projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\projects\\gui projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\projects\\gui projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\projects\\gui projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\pegawai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\pegawai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\pegawai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\pegawai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\projects\\gui projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\produk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\produk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\projects\\gui projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\projects\\gui projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\projects\\gui projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\projects\\gui projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|e:\\projects\\gui projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\produk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -33,14 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\pegawai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\pegawai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{55151A9A-AD4A-4A63-9644-4237585793FE}|toko_laptop_tugas\\toko_laptop_tugas.csproj|solutionrelative:toko_laptop_tugas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,19 +91,172 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Billing.cs",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Billing.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Billing.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Billing.cs",
+              "RelativeToolTip": "toko_laptop_tugas\\Billing.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T21:08:36.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Customer.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Customer.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Customer.cs",
+              "RelativeToolTip": "toko_laptop_tugas\\Customer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T21:08:23.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.cs",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Home.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Home.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Home.cs",
+              "RelativeToolTip": "toko_laptop_tugas\\Home.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T21:07:56.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pegawai.cs",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Pegawai.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Pegawai.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Pegawai.cs",
+              "RelativeToolTip": "toko_laptop_tugas\\Pegawai.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T21:07:44.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Produk.cs",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Produk.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Produk.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Produk.cs",
+              "RelativeToolTip": "toko_laptop_tugas\\Produk.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T21:07:30.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Profile.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Profile.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Profile.cs",
+              "RelativeToolTip": "toko_laptop_tugas\\Profile.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T21:07:19.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\DBConnection.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\DBConnection.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\DBConnection.cs",
+              "RelativeToolTip": "toko_laptop_tugas\\DBConnection.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T20:50:01.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.cs",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Login.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Login.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Login.cs",
+              "RelativeToolTip": "toko_laptop_tugas\\Login.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T19:09:02.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Register.cs [Design]",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Register.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Register.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Register.cs [Design]",
+              "RelativeToolTip": "toko_laptop_tugas\\Register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T10:55:15.572Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Pegawai.cs [Design]",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Pegawai.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Pegawai.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Pegawai.cs [Design]",
+              "RelativeToolTip": "toko_laptop_tugas\\Pegawai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T16:08:40.738Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Login.Designer.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Login.Designer.cs",
+              "RelativeToolTip": "toko_laptop_tugas\\Login.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T21:02:59.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Login.cs",
+              "RelativeDocumentMoniker": "toko_laptop_tugas\\Login.cs",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Login.cs [Design]",
+              "RelativeToolTip": "toko_laptop_tugas\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T10:54:54.021Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Register.cs",
               "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Register.cs",
               "RelativeDocumentMoniker": "toko_laptop_tugas\\Register.cs",
               "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Register.cs",
               "RelativeToolTip": "toko_laptop_tugas\\Register.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAABYAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T16:50:42.833Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
               "Title": "Register.Designer.cs",
               "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Register.Designer.cs",
               "RelativeDocumentMoniker": "toko_laptop_tugas\\Register.Designer.cs",
@@ -80,30 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Register.cs [Design]",
-              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Register.cs",
-              "RelativeDocumentMoniker": "toko_laptop_tugas\\Register.cs",
-              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Register.cs [Design]",
-              "RelativeToolTip": "toko_laptop_tugas\\Register.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T10:55:15.572Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Login.cs",
-              "RelativeDocumentMoniker": "toko_laptop_tugas\\Login.cs",
-              "ToolTip": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Login.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T10:54:54.021Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 13,
               "Title": "Profile.cs [Design]",
               "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Profile.cs",
               "RelativeDocumentMoniker": "toko_laptop_tugas\\Profile.cs",
@@ -115,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "Produk.cs [Design]",
               "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Produk.cs",
               "RelativeDocumentMoniker": "toko_laptop_tugas\\Produk.cs",
@@ -127,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
               "Title": "Home.cs [Design]",
               "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Home.cs",
               "RelativeDocumentMoniker": "toko_laptop_tugas\\Home.cs",
@@ -139,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "Customer.cs [Design]",
               "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Customer.cs",
               "RelativeDocumentMoniker": "toko_laptop_tugas\\Customer.cs",
@@ -151,25 +317,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Pegawai.cs [Design]",
-              "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Pegawai.cs",
-              "RelativeDocumentMoniker": "toko_laptop_tugas\\Pegawai.cs",
-              "ToolTip": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Pegawai.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Pegawai.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T16:08:40.738Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "Billing.cs [Design]",
               "DocumentMoniker": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Billing.cs",
               "RelativeDocumentMoniker": "toko_laptop_tugas\\Billing.cs",
-              "ToolTip": "E:\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Billing.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Billing.cs [Design]",
+              "ToolTip": "E:\\projects\\GUI projects\\file vscode\\toko_laptop_tugas\\toko_laptop_tugas\\Billing.cs [Design]",
+              "RelativeToolTip": "toko_laptop_tugas\\Billing.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T11:15:43.557Z"
+              "WhenOpened": "2025-02-14T11:15:43.557Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

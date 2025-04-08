@@ -20,7 +20,7 @@ namespace toko_laptop_tugas
             LoadProfileData(); // Memuat data profil pengguna
         }
 
-        SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-UB2KSKP\SQLEXPRESS;Initial Catalog=db_toko_laptop_tugas;Integrated Security=True");
+        SqlConnection Conn = new SqlConnection(DBConnection.ConnectionString);
         private void LoadProfileData()
         {
             try

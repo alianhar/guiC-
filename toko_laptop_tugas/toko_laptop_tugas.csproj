@@ -63,6 +63,7 @@
     <Compile Include="Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBConnection.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
