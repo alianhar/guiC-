@@ -17,7 +17,7 @@ namespace toko_laptop_tugas
             InitializeComponent();
         }
 
-        SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-UB2KSKP\SQLEXPRESS;Initial Catalog=db_toko_laptop_tugas;Integrated Security=True");
+        SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-PDGNVP8\SQLEXPRESS;Initial Catalog=db_toko_laptop_tugas;Integrated Security=True");
 
         public static string EmpName { get; set; }
 

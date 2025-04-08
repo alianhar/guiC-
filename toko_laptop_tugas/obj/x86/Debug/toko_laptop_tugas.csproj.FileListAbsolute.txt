@@ -14,3 +14,20 @@ E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tug
 E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.pdb
 E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\bin\Debug\toko_laptop_tugas.pdb
 E:\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Register.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\bin\Debug\toko_laptop_tugas.exe.config
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\bin\Debug\toko_laptop_tugas.exe
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\bin\Debug\toko_laptop_tugas.pdb
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.csproj.AssemblyReference.cache
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Billing.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Customer.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Home.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Login.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Pegawai.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Produk.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Profile.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Properties.Resources.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Register.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.csproj.GenerateResource.cache
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.csproj.CoreCompileInputs.cache
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.exe
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.pdb
