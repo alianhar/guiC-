@@ -1,2 +1,5 @@
 # Visual Studio Code
 .vs/ 
+# Ignore folder BuktiTransfer di path build (Debug/Release)
+bin/Debug/BuktiTransfer/
+bin/Release/BuktiTransfer/

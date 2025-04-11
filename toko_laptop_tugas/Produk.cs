@@ -209,5 +209,19 @@ namespace toko_laptop_tugas
             // Tutup form Home
             this.Close();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiProduk = new Transaksi();
+            transaksiProduk.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Delivery deliveryProduk = new Delivery();
+            deliveryProduk.Show();
+            this.Hide();
+        }
     }
 }

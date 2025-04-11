@@ -445,7 +445,19 @@ namespace toko_laptop_tugas
             BillsDGV.Refresh();
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiBilling = new Transaksi();
+            transaksiBilling.Show();
+            this.Hide();
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Delivery deliveryBilling = new Delivery();
+            deliveryBilling.Show();
+            this.Hide();
+        }
 
         private void ProductsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

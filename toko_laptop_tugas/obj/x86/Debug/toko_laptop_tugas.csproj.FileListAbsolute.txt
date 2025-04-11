@@ -31,3 +31,11 @@ E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86
 E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.csproj.CoreCompileInputs.cache
 E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.exe
 E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.pdb
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Delivery.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.DeliveryCust.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.HomeCust.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.ProdukCust.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.TransaksiCust.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.ProfileCust.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.Transaksi.resources
+E:\projects\GUI projects\file vscode\toko_laptop_tugas\toko_laptop_tugas\obj\x86\Debug\toko_laptop_tugas.CheckoutPopupFormCust.resources

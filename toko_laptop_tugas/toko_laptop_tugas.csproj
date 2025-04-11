@@ -57,6 +57,12 @@
     <Compile Include="Billing.Designer.cs">
       <DependentUpon>Billing.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckoutPopupFormCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckoutPopupFormCust.Designer.cs">
+      <DependentUpon>CheckoutPopupFormCust.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +70,29 @@
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Delivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery.Designer.cs">
+      <DependentUpon>Delivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryCust.Designer.cs">
+      <DependentUpon>DeliveryCust.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeCust.Designer.cs">
+      <DependentUpon>HomeCust.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -88,11 +112,23 @@
     <Compile Include="Produk.Designer.cs">
       <DependentUpon>Produk.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProdukCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdukCust.Designer.cs">
+      <DependentUpon>ProdukCust.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Profile.Designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileCust.Designer.cs">
+      <DependentUpon>ProfileCust.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,14 +138,38 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi.Designer.cs">
+      <DependentUpon>Transaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransaksiCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransaksiCust.Designer.cs">
+      <DependentUpon>TransaksiCust.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Billing.resx">
       <DependentUpon>Billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckoutPopupFormCust.resx">
+      <DependentUpon>CheckoutPopupFormCust.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Delivery.resx">
+      <DependentUpon>Delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryCust.resx">
+      <DependentUpon>DeliveryCust.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeCust.resx">
+      <DependentUpon>HomeCust.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -120,8 +180,14 @@
     <EmbeddedResource Include="Produk.resx">
       <DependentUpon>Produk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProdukCust.resx">
+      <DependentUpon>ProdukCust.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileCust.resx">
+      <DependentUpon>ProfileCust.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +201,12 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi.resx">
+      <DependentUpon>Transaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransaksiCust.resx">
+      <DependentUpon>TransaksiCust.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

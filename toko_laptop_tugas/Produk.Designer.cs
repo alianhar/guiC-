@@ -64,6 +64,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -310,7 +316,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(179, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 565);
+            this.panel1.Size = new System.Drawing.Size(944, 644);
             this.panel1.TabIndex = 49;
             // 
             // ProductsDGV
@@ -352,7 +358,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(3, 455);
+            this.pictureBox7.Location = new System.Drawing.Point(3, 602);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(40, 39);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -361,7 +367,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(45, 455);
+            this.button6.Location = new System.Drawing.Point(45, 602);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(113, 39);
             this.button6.TabIndex = 60;
@@ -450,12 +456,56 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(3, 487);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 67;
+            this.pictureBox18.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(45, 487);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(113, 39);
+            this.button7.TabIndex = 66;
+            this.button7.Text = "Delivery";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(3, 414);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 65;
+            this.pictureBox17.TabStop = false;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(45, 414);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(113, 39);
+            this.button8.TabIndex = 64;
+            this.button8.Text = "Transactions";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Produk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(1134, 559);
+            this.ClientSize = new System.Drawing.Size(1120, 653);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.EmpNameLbl);
             this.Controls.Add(this.button1);
@@ -492,6 +542,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,7 +586,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox CatPrCmb;
-
-
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Button button8;
     }
 }

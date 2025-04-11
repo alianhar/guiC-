@@ -66,6 +66,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -80,12 +84,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeesDGV)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(2, 455);
+            this.pictureBox7.Location = new System.Drawing.Point(2, 602);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(40, 39);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,7 +100,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(44, 455);
+            this.button6.Location = new System.Drawing.Point(44, 602);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(113, 39);
             this.button6.TabIndex = 26;
@@ -273,7 +279,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(178, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 565);
+            this.panel1.Size = new System.Drawing.Size(944, 644);
             this.panel1.TabIndex = 14;
             // 
             // EmployeesDGV
@@ -468,12 +474,56 @@
             this.panel5.Size = new System.Drawing.Size(180, 50);
             this.panel5.TabIndex = 28;
             // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(2, 480);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 71;
+            this.pictureBox18.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(44, 480);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(113, 39);
+            this.button7.TabIndex = 70;
+            this.button7.Text = "Delivery";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(2, 407);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 69;
+            this.pictureBox17.TabStop = false;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(44, 407);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(113, 39);
+            this.button8.TabIndex = 68;
+            this.button8.Text = "Transactions";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Pegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(1134, 559);
+            this.ClientSize = new System.Drawing.Size(1120, 653);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.EmpNameLbl);
             this.Controls.Add(this.button6);
@@ -511,6 +561,8 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -555,7 +607,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DateTimePicker EmpDOB;
         private System.Windows.Forms.Label label9;
-
-
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Button button8;
     }
 }

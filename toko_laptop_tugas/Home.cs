@@ -264,5 +264,18 @@ namespace toko_laptop_tugas
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiHome = new Transaksi();
+            transaksiHome.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Delivery deliveryHome = new Delivery();
+            deliveryHome.Show();
+            this.Hide();
+        }
     }
 }

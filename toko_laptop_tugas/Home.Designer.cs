@@ -89,6 +89,10 @@
             this.SignOutBtn = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -118,6 +122,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -138,7 +144,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(179, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(840, 557);
+            this.panel1.Size = new System.Drawing.Size(840, 641);
             this.panel1.TabIndex = 0;
             // 
             // panel14
@@ -147,38 +153,38 @@
             this.panel14.Controls.Add(this.SaldoLbl);
             this.panel14.Controls.Add(this.label12);
             this.panel14.Controls.Add(this.label8);
-            this.panel14.Location = new System.Drawing.Point(36, 458);
+            this.panel14.Location = new System.Drawing.Point(18, 554);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(766, 68);
+            this.panel14.Size = new System.Drawing.Size(805, 68);
             this.panel14.TabIndex = 12;
             // 
             // SaldoLbl
             // 
             this.SaldoLbl.AutoSize = true;
-            this.SaldoLbl.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaldoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaldoLbl.Location = new System.Drawing.Point(647, 20);
             this.SaldoLbl.Name = "SaldoLbl";
-            this.SaldoLbl.Size = new System.Drawing.Size(86, 24);
+            this.SaldoLbl.Size = new System.Drawing.Size(82, 25);
             this.SaldoLbl.TabIndex = 2;
             this.SaldoLbl.Text = "label15";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(401, 20);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 24);
+            this.label12.Size = new System.Drawing.Size(45, 25);
             this.label12.TabIndex = 1;
             this.label12.Text = "Rp.";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(16, 20);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(270, 24);
+            this.label8.Size = new System.Drawing.Size(249, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Saldo Total Pendapatan:";
             // 
@@ -715,7 +721,7 @@
             // 
             // SignOutBtn
             // 
-            this.SignOutBtn.Location = new System.Drawing.Point(45, 458);
+            this.SignOutBtn.Location = new System.Drawing.Point(45, 602);
             this.SignOutBtn.Name = "SignOutBtn";
             this.SignOutBtn.Size = new System.Drawing.Size(113, 39);
             this.SignOutBtn.TabIndex = 12;
@@ -726,7 +732,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(3, 458);
+            this.pictureBox7.Location = new System.Drawing.Point(3, 602);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(40, 39);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -741,12 +747,56 @@
             this.panel8.Size = new System.Drawing.Size(180, 50);
             this.panel8.TabIndex = 29;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(45, 420);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 39);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Transactions";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(3, 420);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 31;
+            this.pictureBox17.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(45, 497);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 39);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "Delivery";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(3, 497);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 33;
+            this.pictureBox18.TabStop = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(1015, 551);
+            this.ClientSize = new System.Drawing.Size(1015, 653);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.SignOutBtn);
             this.Controls.Add(this.pictureBox6);
@@ -808,6 +858,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -874,5 +926,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label SaldoLbl;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox18;
     }
 }

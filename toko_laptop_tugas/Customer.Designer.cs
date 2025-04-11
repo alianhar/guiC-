@@ -62,6 +62,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.CustUsernameTb = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CustPasswordTb = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CustConfirmPasswordTb = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -75,6 +85,8 @@
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // EmpNameLbl
@@ -172,7 +184,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(2, 455);
+            this.pictureBox7.Location = new System.Drawing.Point(2, 589);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(40, 39);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -199,7 +211,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(44, 455);
+            this.button6.Location = new System.Drawing.Point(44, 589);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(113, 39);
             this.button6.TabIndex = 42;
@@ -330,12 +342,18 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(178, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 565);
+            this.panel1.Size = new System.Drawing.Size(944, 631);
             this.panel1.TabIndex = 31;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightCyan;
+            this.panel4.Controls.Add(this.CustConfirmPasswordTb);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.CustPasswordTb);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.CustUsernameTb);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.BtnDelete);
             this.panel4.Controls.Add(this.BtnEdit);
             this.panel4.Controls.Add(this.BtnSave);
@@ -423,12 +441,114 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // CustUsernameTb
+            // 
+            this.CustUsernameTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustUsernameTb.Location = new System.Drawing.Point(675, 66);
+            this.CustUsernameTb.Name = "CustUsernameTb";
+            this.CustUsernameTb.Size = new System.Drawing.Size(178, 25);
+            this.CustUsernameTb.TabIndex = 20;
+            this.CustUsernameTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(671, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 18);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Username";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // CustPasswordTb
+            // 
+            this.CustPasswordTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustPasswordTb.Location = new System.Drawing.Point(674, 132);
+            this.CustPasswordTb.Name = "CustPasswordTb";
+            this.CustPasswordTb.PasswordChar = '*';
+            this.CustPasswordTb.Size = new System.Drawing.Size(178, 25);
+            this.CustPasswordTb.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(670, 109);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 18);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Password";
+            // 
+            // CustConfirmPasswordTb
+            // 
+            this.CustConfirmPasswordTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustConfirmPasswordTb.Location = new System.Drawing.Point(675, 195);
+            this.CustConfirmPasswordTb.Name = "CustConfirmPasswordTb";
+            this.CustConfirmPasswordTb.PasswordChar = '*';
+            this.CustConfirmPasswordTb.Size = new System.Drawing.Size(178, 25);
+            this.CustConfirmPasswordTb.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(671, 172);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(137, 18);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Confirm Password";
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(2, 479);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 71;
+            this.pictureBox18.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(44, 479);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(113, 39);
+            this.button7.TabIndex = 70;
+            this.button7.Text = "Delivery";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(2, 411);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 69;
+            this.pictureBox17.TabStop = false;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(44, 411);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(113, 39);
+            this.button8.TabIndex = 68;
+            this.button8.Text = "Transactions";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(1134, 559);
+            this.ClientSize = new System.Drawing.Size(1120, 653);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.EmpNameLbl);
             this.Controls.Add(this.pictureBox8);
@@ -466,6 +586,8 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,5 +628,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox CustUsernameTb;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox CustConfirmPasswordTb;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox CustPasswordTb;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Button button8;
     }
 }

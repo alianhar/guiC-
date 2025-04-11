@@ -18,8 +18,12 @@ namespace toko_laptop_tugas
         }
 
         SqlConnection Conn = new SqlConnection(DBConnection.ConnectionString);
-
         public static string EmpName { get; set; }
+        public static string CustName { get; set; }
+        public static int UserType { get; set; } // 1 for Employee, 2 for Customer
+        public static int CustId { get; set; } // Tambahkan ini
+        public static int EmpId { get; set; } // Tambahkan ini
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -32,37 +36,61 @@ namespace toko_laptop_tugas
 
             try
             {
-                // Pastikan koneksi dalam keadaan tertutup sebelum membuka
                 if (Conn.State == ConnectionState.Closed)
                     Conn.Open();
 
-                // Query untuk mengecek apakah ada data karyawan yang cocok dengan input
-                string query = "SELECT EmpName FROM EmployeeTbl WHERE EmpName=@EmpName AND EmpPass=@EmpPass";
-                SqlCommand cmd = new SqlCommand(query, Conn);
+                // Cek login sebagai employee
+                string employeeQuery = "SELECT EmpNum, EmpName FROM EmployeeTbl WHERE EmpName=@Username AND EmpPass=@Password";
+                SqlCommand empCmd = new SqlCommand(employeeQuery, Conn);
+                empCmd.Parameters.AddWithValue("@Username", UsernameTb.Text.Trim());
+                empCmd.Parameters.AddWithValue("@Password", PasswordTb.Text.Trim());
 
-                // Gunakan string langsung tanpa konversi
-                cmd.Parameters.AddWithValue("@EmpName", UsernameTb.Text);
-                cmd.Parameters.AddWithValue("@EmpPass", PasswordTb.Text);
-
-                object result = cmd.ExecuteScalar();
-                if (result != null)
+                using (SqlDataReader reader = empCmd.ExecuteReader())
                 {
-                    // Simpan nama karyawan ke properti statis
-                    EmpName = result.ToString();
+                    if (reader.Read())
+                    {
+                        EmpId = Convert.ToInt32(reader["EmpNum"]);
+                        EmpName = reader["EmpName"].ToString();
+                        UserType = 1; // Employee
+                        MessageBox.Show("Login Sukses sebagai Karyawan", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        reader.Close();
 
-                    MessageBox.Show("Login Sukses", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Home home = new Home();
-                    home.Show();
-                    this.Hide();
+                        Home home = new Home();
+                        home.Show();
+                        this.Hide();
+                        return;
+                    }
                 }
-                else
+
+                // Cek login sebagai customer
+                string customerQuery = "SELECT CustId, CustName FROM CustomerTbl WHERE CustUsername=@Username AND CustPass=@Password";
+                SqlCommand custCmd = new SqlCommand(customerQuery, Conn);
+                custCmd.Parameters.AddWithValue("@Username", UsernameTb.Text.Trim());
+                custCmd.Parameters.AddWithValue("@Password", PasswordTb.Text.Trim());
+
+                using (SqlDataReader reader = custCmd.ExecuteReader())
                 {
-                    MessageBox.Show("Username atau password salah", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (reader.Read())
+                    {
+                        CustId = Convert.ToInt32(reader["CustId"]);
+                        CustName = reader["CustName"].ToString();
+                        UserType = 2; // Customer
+                        MessageBox.Show("Login Sukses sebagai Customer", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        reader.Close();
+
+                        HomeCust homeCust = new HomeCust();
+                        homeCust.Show();
+                        this.Hide();
+                        return;
+                    }
                 }
+
+                // Jika sampai di sini, login gagal
+                MessageBox.Show("Username atau password salah", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error: " + Ex.Message);
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

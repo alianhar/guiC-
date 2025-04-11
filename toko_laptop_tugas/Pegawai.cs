@@ -212,5 +212,21 @@ namespace toko_laptop_tugas
             profilePegawai.Show();
             this.Hide();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiPegawai = new Transaksi();
+            transaksiPegawai.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Delivery deliveryPegawai = new Delivery();
+            deliveryPegawai.Show();
+            this.Hide();
+        }
+
+
     }
 }
