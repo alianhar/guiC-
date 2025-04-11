@@ -15,10 +15,10 @@ namespace toko_laptop_tugas
         {
             InitializeComponent();
         }
-        SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-UB2KSKP\SQLEXPRESS;Initial Catalog=db_toko_laptop_tugas;Integrated Security=True");
+        SqlConnection Conn = new SqlConnection(DBConnection.ConnectionString);
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            // Pastikan semua field wajib terisi
+            // Pastikan semua field wajib terisi (Username, Password, Confirm Password, Phone)
             if (UsernameTb.Text.Trim() == "" || PasswordTb.Text.Trim() == "" || ConfirmPassTb.Text.Trim() == "" || PhoneTb.Text.Trim() == "")
             {
                 MessageBox.Show("Harap isi semua field yang diperlukan (Username, Password, Confirm Password, Phone).");
@@ -36,8 +36,8 @@ namespace toko_laptop_tugas
             {
                 Conn.Open();
 
-                // Cek apakah username sudah ada
-                string checkUserQuery = "SELECT COUNT(*) FROM EmployeeTbl WHERE EmpName = @username";
+                // Cek apakah username sudah ada di CustomerTbl
+                string checkUserQuery = "SELECT COUNT(*) FROM CustomerTbl WHERE CustUsername = @username";
                 using (SqlCommand cmd = new SqlCommand(checkUserQuery, Conn))
                 {
                     cmd.Parameters.AddWithValue("@username", UsernameTb.Text.Trim());
@@ -49,24 +49,25 @@ namespace toko_laptop_tugas
                     }
                 }
 
-                // Jika belum ada, lakukan insert data ke tabel EmployeeTbl
-                string insertQuery = @"INSERT INTO EmployeeTbl (EmpName, EmpPhone, EmpPass, EmpAdd, EmpDOB)
-                                       VALUES (@username, @phone, @password, @address, @dob)";
+                // Insert data ke CustomerTbl
+                string insertQuery = @"INSERT INTO CustomerTbl (CustName, CustUsername, CustPhone, CustPass, CustAdd)
+                               VALUES (@custName, @username, @phone, @password, @address)";
 
                 using (SqlCommand insertCmd = new SqlCommand(insertQuery, Conn))
                 {
+                    // Pada contoh ini, kita gunakan UsernameTb sebagai sumber untuk CustName dan CustUsername.
+                    insertCmd.Parameters.AddWithValue("@custName", UsernameTb.Text.Trim());
                     insertCmd.Parameters.AddWithValue("@username", UsernameTb.Text.Trim());
                     insertCmd.Parameters.AddWithValue("@phone", PhoneTb.Text.Trim());
                     insertCmd.Parameters.AddWithValue("@password", PasswordTb.Text.Trim());
-                    // Set nilai default
+                    // Set nilai default untuk CustAdd
                     insertCmd.Parameters.AddWithValue("@address", "Belum Disetel");
-                    insertCmd.Parameters.AddWithValue("@dob", DateTime.Today); // Set tanggal lahir ke hari ini
 
                     int rowsAffected = insertCmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Registrasi berhasil! Anda akan diarahkan ke halaman login.");
-                        // Setelah registrasi, tampilkan halaman login
+                        MessageBox.Show("Registrasi berhasil! Silahkan login.");
+                        // Tampilkan halaman login setelah registrasi
                         Login login = new Login();
                         login.Show();
                         this.Hide();
@@ -87,7 +88,8 @@ namespace toko_laptop_tugas
                     Conn.Close();
             }
         }
-        
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {

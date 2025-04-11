@@ -29,7 +29,7 @@ namespace toko_laptop_tugas
         }
 
         //koneksi
-        SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-UB2KSKP\SQLEXPRESS;Initial Catalog=db_toko_laptop_tugas;Integrated Security=True");
+        SqlConnection Conn = new SqlConnection(DBConnection.ConnectionString);
 
 
         public void hitungTotalSaldo()
@@ -264,5 +264,18 @@ namespace toko_laptop_tugas
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiHome = new Transaksi();
+            transaksiHome.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Delivery deliveryHome = new Delivery();
+            deliveryHome.Show();
+            this.Hide();
+        }
     }
 }

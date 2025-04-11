@@ -20,7 +20,7 @@ namespace toko_laptop_tugas
         }
 
         //koneksi
-        SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-UB2KSKP\SQLEXPRESS;Initial Catalog=db_toko_laptop_tugas;Integrated Security=True");
+        SqlConnection Conn = new SqlConnection(DBConnection.ConnectionString);
 
         //menampilkan data di dgv
         private void DisplayCustomers()
@@ -53,19 +53,27 @@ namespace toko_laptop_tugas
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            if (CustNameTb.Text == "" || CustAddTb.Text == "" || CustPhoneTb.Text == "")
+            if (CustNameTb.Text == "" || CustAddTb.Text == "" || CustPhoneTb.Text == "" || CustUsernameTb.Text == "" || CustPasswordTb.Text == "")
             {
                 MessageBox.Show("Data tidak Boleh Kosong!");
+            }
+            // Cek kecocokan Password dan Confirm Password
+            if (CustPasswordTb.Text != CustConfirmPasswordTb.Text)
+            {
+                MessageBox.Show("Password dan konfirmasi password tidak cocok!");
+                return;
             }
             else
             {
                 try
                 {
                     Conn.Open();
-                    SqlCommand cmd = new SqlCommand("INSERT INTO CustomerTbl(CustName,CustAdd,CustPhone) VALUES (@CN,@CA,@CP)", Conn);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO CustomerTbl(CustName,CustAdd,CustPhone,CustUsername,CustPass) VALUES (@CN,@CA,@CP,@CU,@CPa)", Conn);
                     cmd.Parameters.AddWithValue("@CN", CustNameTb.Text);
                     cmd.Parameters.AddWithValue("@CA", CustAddTb.Text);
                     cmd.Parameters.AddWithValue("@CP", CustPhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@CU", CustUsernameTb.Text);
+                    cmd.Parameters.AddWithValue("@CPa", CustPasswordTb.Text);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Berhasil Menambahkan Customer");
@@ -93,7 +101,8 @@ namespace toko_laptop_tugas
             CustNameTb.Text = row.Cells[1].Value != null ? row.Cells[1].Value.ToString() : "";
             CustAddTb.Text = row.Cells[2].Value != null ? row.Cells[2].Value.ToString() : "";
             CustPhoneTb.Text = row.Cells[3].Value != null ? row.Cells[3].Value.ToString() : "";
-       
+            CustPasswordTb.Text = row.Cells[4].Value != null ? row.Cells[4].Value.ToString() : "";
+            CustUsernameTb.Text = row.Cells[5].Value != null ? row.Cells[5].Value.ToString() : "";
 
             if (!string.IsNullOrEmpty(CustNameTb.Text))
             {
@@ -131,19 +140,28 @@ namespace toko_laptop_tugas
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            if (CustNameTb.Text == "" || CustAddTb.Text == "" || CustPhoneTb.Text == "")
+            if (CustNameTb.Text == "" || CustAddTb.Text == "" || CustPhoneTb.Text == "" || CustUsernameTb.Text == "" || CustPasswordTb.Text == "")
             {
                 MessageBox.Show("Data tidak Boleh Kosong!");
             }
+            // Cek kecocokan Password dan Confirm Password
+            if (CustPasswordTb.Text != CustConfirmPasswordTb.Text)
+            {
+                MessageBox.Show("Password dan konfirmasi password tidak cocok!");
+                return;
+            }
+
             else
             {
                 try
                 {
                     Conn.Open();
-                    SqlCommand cmd = new SqlCommand("UPDATE CustomerTbl SET CustName=@CN,CustAdd=@CA,CustPhone=@CP WHERE CustId =@CKey", Conn);
+                    SqlCommand cmd = new SqlCommand("UPDATE CustomerTbl SET CustName=@CN,CustAdd=@CA,CustPhone=@CP,CustPass=@CPa,CustUsername=@CU WHERE CustId =@CKey", Conn);
                     cmd.Parameters.AddWithValue("@CN", CustNameTb.Text);
                     cmd.Parameters.AddWithValue("@CA", CustAddTb.Text);
                     cmd.Parameters.AddWithValue("@CP", CustPhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@CU", CustUsernameTb.Text);
+                    cmd.Parameters.AddWithValue("@CPa", CustPasswordTb.Text);
                     cmd.Parameters.AddWithValue("@Ckey", key);
 
                     cmd.ExecuteNonQuery();
@@ -204,6 +222,30 @@ namespace toko_laptop_tugas
         {
             Profile pr = new Profile();
             pr.Show();
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiCustomer = new Transaksi();
+            transaksiCustomer.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Delivery deliveryCustomer = new Delivery();
+            deliveryCustomer.Show();
             this.Hide();
         }
     }

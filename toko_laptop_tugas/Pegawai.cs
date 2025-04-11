@@ -18,10 +18,10 @@ namespace toko_laptop_tugas
             EmpNameLbl.Text = Login.EmpName;
             DisplayEmployees();
         }
-        
+
         //koneksi
-        SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-UB2KSKP\SQLEXPRESS;Initial Catalog=db_toko_laptop_tugas;Integrated Security=True");
-        
+        SqlConnection Conn = new SqlConnection(DBConnection.ConnectionString);
+
         //menampilkan data di dgv
         private void DisplayEmployees()
         {
@@ -212,5 +212,21 @@ namespace toko_laptop_tugas
             profilePegawai.Show();
             this.Hide();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiPegawai = new Transaksi();
+            transaksiPegawai.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Delivery deliveryPegawai = new Delivery();
+            deliveryPegawai.Show();
+            this.Hide();
+        }
+
+
     }
 }

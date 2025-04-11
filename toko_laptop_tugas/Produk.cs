@@ -20,7 +20,7 @@ namespace toko_laptop_tugas
         }
 
         //koneksi
-        SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-UB2KSKP\SQLEXPRESS;Initial Catalog=db_toko_laptop_tugas;Integrated Security=True");
+        SqlConnection Conn = new SqlConnection(DBConnection.ConnectionString);
 
         //menampilkan data di dgv
         private void DisplayProducts()
@@ -208,6 +208,20 @@ namespace toko_laptop_tugas
 
             // Tutup form Home
             this.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiProduk = new Transaksi();
+            transaksiProduk.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Delivery deliveryProduk = new Delivery();
+            deliveryProduk.Show();
+            this.Hide();
         }
     }
 }

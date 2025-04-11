@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.PasswordTb = new System.Windows.Forms.TextBox();
             this.UsernameTb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnRegister = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,11 +58,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 9);
+            this.label1.Location = new System.Drawing.Point(108, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 19);
+            this.label1.Size = new System.Drawing.Size(146, 19);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Bunny PC Store";
+            this.label1.Text = "ToKomp PC Store";
             // 
             // panel1
             // 
@@ -80,12 +80,23 @@
             this.panel1.Size = new System.Drawing.Size(384, 336);
             this.panel1.TabIndex = 2;
             // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(115, 262);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(139, 30);
+            this.btnRegister.TabIndex = 10;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
             // PasswordTb
             // 
             this.PasswordTb.BackColor = System.Drawing.Color.White;
             this.PasswordTb.ForeColor = System.Drawing.Color.Black;
             this.PasswordTb.Location = new System.Drawing.Point(98, 168);
             this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.PasswordChar = '*';
             this.PasswordTb.Size = new System.Drawing.Size(166, 26);
             this.PasswordTb.TabIndex = 9;
             // 
@@ -144,16 +155,6 @@
             this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Username";
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(115, 262);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(139, 30);
-            this.btnRegister.TabIndex = 10;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // Login
             // 

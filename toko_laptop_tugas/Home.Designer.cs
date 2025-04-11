@@ -30,13 +30,42 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.SaldoLbl = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.SoldSparePartLbl = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.SparePartLbl = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.SoldGadgetLbl = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.SoldHardwareLbl = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.SoldLaptopLbl = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.GadgetLbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.HardwareLbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.laptopLbl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -60,36 +89,22 @@
             this.SignOutBtn = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.laptopLbl = new System.Windows.Forms.Label();
-            this.HardwareLbl = new System.Windows.Forms.Label();
-            this.GadgetLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.SoldGadgetLbl = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.SoldHardwareLbl = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.SoldLaptopLbl = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.SparePartLbl = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.SoldSparePartLbl = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.SaldoLbl = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel6.SuspendLayout();
@@ -107,17 +122,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -138,8 +144,274 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(179, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(840, 557);
+            this.panel1.Size = new System.Drawing.Size(840, 641);
             this.panel1.TabIndex = 0;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.Teal;
+            this.panel14.Controls.Add(this.SaldoLbl);
+            this.panel14.Controls.Add(this.label12);
+            this.panel14.Controls.Add(this.label8);
+            this.panel14.Location = new System.Drawing.Point(18, 554);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(805, 68);
+            this.panel14.TabIndex = 12;
+            // 
+            // SaldoLbl
+            // 
+            this.SaldoLbl.AutoSize = true;
+            this.SaldoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaldoLbl.Location = new System.Drawing.Point(647, 20);
+            this.SaldoLbl.Name = "SaldoLbl";
+            this.SaldoLbl.Size = new System.Drawing.Size(82, 25);
+            this.SaldoLbl.TabIndex = 2;
+            this.SaldoLbl.Text = "label15";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(401, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 25);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Rp.";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(16, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(249, 25);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Saldo Total Pendapatan:";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Chocolate;
+            this.panel13.Controls.Add(this.SoldSparePartLbl);
+            this.panel13.Controls.Add(this.label14);
+            this.panel13.Controls.Add(this.pictureBox16);
+            this.panel13.Location = new System.Drawing.Point(648, 283);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(175, 84);
+            this.panel13.TabIndex = 11;
+            // 
+            // SoldSparePartLbl
+            // 
+            this.SoldSparePartLbl.AutoSize = true;
+            this.SoldSparePartLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoldSparePartLbl.Location = new System.Drawing.Point(96, 45);
+            this.SoldSparePartLbl.Name = "SoldSparePartLbl";
+            this.SoldSparePartLbl.Size = new System.Drawing.Size(57, 20);
+            this.SoldSparePartLbl.TabIndex = 5;
+            this.SoldSparePartLbl.Text = "label1";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(81, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(94, 19);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Komponen";
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(78, 83);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 1;
+            this.pictureBox16.TabStop = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Chocolate;
+            this.panel12.Controls.Add(this.SparePartLbl);
+            this.panel12.Controls.Add(this.label10);
+            this.panel12.Controls.Add(this.pictureBox15);
+            this.panel12.Location = new System.Drawing.Point(649, 157);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(175, 84);
+            this.panel12.TabIndex = 10;
+            // 
+            // SparePartLbl
+            // 
+            this.SparePartLbl.AutoSize = true;
+            this.SparePartLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SparePartLbl.Location = new System.Drawing.Point(96, 45);
+            this.SparePartLbl.Name = "SparePartLbl";
+            this.SparePartLbl.Size = new System.Drawing.Size(57, 20);
+            this.SparePartLbl.TabIndex = 5;
+            this.SparePartLbl.Text = "label1";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(81, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 19);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Komponen";
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
+            this.pictureBox15.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(78, 83);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 1;
+            this.pictureBox15.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 254);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(247, 25);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Produk Terjual Per Kategori";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Chocolate;
+            this.panel9.Controls.Add(this.SoldGadgetLbl);
+            this.panel9.Controls.Add(this.label9);
+            this.panel9.Controls.Add(this.pictureBox12);
+            this.panel9.Location = new System.Drawing.Point(431, 282);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(178, 84);
+            this.panel9.TabIndex = 8;
+            // 
+            // SoldGadgetLbl
+            // 
+            this.SoldGadgetLbl.AutoSize = true;
+            this.SoldGadgetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoldGadgetLbl.Location = new System.Drawing.Point(101, 44);
+            this.SoldGadgetLbl.Name = "SoldGadgetLbl";
+            this.SoldGadgetLbl.Size = new System.Drawing.Size(57, 20);
+            this.SoldGadgetLbl.TabIndex = 6;
+            this.SoldGadgetLbl.Text = "label1";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(99, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 19);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Gadget";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(78, 83);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 1;
+            this.pictureBox12.TabStop = false;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Chocolate;
+            this.panel10.Controls.Add(this.SoldHardwareLbl);
+            this.panel10.Controls.Add(this.label11);
+            this.panel10.Controls.Add(this.pictureBox13);
+            this.panel10.Location = new System.Drawing.Point(219, 281);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(175, 84);
+            this.panel10.TabIndex = 7;
+            // 
+            // SoldHardwareLbl
+            // 
+            this.SoldHardwareLbl.AutoSize = true;
+            this.SoldHardwareLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoldHardwareLbl.Location = new System.Drawing.Point(96, 45);
+            this.SoldHardwareLbl.Name = "SoldHardwareLbl";
+            this.SoldHardwareLbl.Size = new System.Drawing.Size(57, 20);
+            this.SoldHardwareLbl.TabIndex = 5;
+            this.SoldHardwareLbl.Text = "label1";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(81, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 19);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Hardware";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(78, 83);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 1;
+            this.pictureBox13.TabStop = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Chocolate;
+            this.panel11.Controls.Add(this.SoldLaptopLbl);
+            this.panel11.Controls.Add(this.label13);
+            this.panel11.Controls.Add(this.pictureBox14);
+            this.panel11.Location = new System.Drawing.Point(16, 281);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(169, 84);
+            this.panel11.TabIndex = 6;
+            // 
+            // SoldLaptopLbl
+            // 
+            this.SoldLaptopLbl.AutoSize = true;
+            this.SoldLaptopLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoldLaptopLbl.Location = new System.Drawing.Point(94, 45);
+            this.SoldLaptopLbl.Name = "SoldLaptopLbl";
+            this.SoldLaptopLbl.Size = new System.Drawing.Size(57, 20);
+            this.SoldLaptopLbl.TabIndex = 4;
+            this.SoldLaptopLbl.Text = "label1";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(94, 10);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 19);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Laptop";
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(78, 83);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 0;
+            this.pictureBox14.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(250, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Jumlah Produk Per Kategori";
             // 
             // panel7
             // 
@@ -151,6 +423,16 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(178, 84);
             this.panel7.TabIndex = 4;
+            // 
+            // GadgetLbl
+            // 
+            this.GadgetLbl.AutoSize = true;
+            this.GadgetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GadgetLbl.Location = new System.Drawing.Point(101, 44);
+            this.GadgetLbl.Name = "GadgetLbl";
+            this.GadgetLbl.Size = new System.Drawing.Size(57, 20);
+            this.GadgetLbl.TabIndex = 6;
+            this.GadgetLbl.Text = "label1";
             // 
             // label6
             // 
@@ -183,6 +465,16 @@
             this.panel6.Size = new System.Drawing.Size(175, 84);
             this.panel6.TabIndex = 3;
             // 
+            // HardwareLbl
+            // 
+            this.HardwareLbl.AutoSize = true;
+            this.HardwareLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HardwareLbl.Location = new System.Drawing.Point(96, 45);
+            this.HardwareLbl.Name = "HardwareLbl";
+            this.HardwareLbl.Size = new System.Drawing.Size(57, 20);
+            this.HardwareLbl.TabIndex = 5;
+            this.HardwareLbl.Text = "label1";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -213,6 +505,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(169, 84);
             this.panel5.TabIndex = 2;
+            // 
+            // laptopLbl
+            // 
+            this.laptopLbl.AutoSize = true;
+            this.laptopLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laptopLbl.Location = new System.Drawing.Point(94, 45);
+            this.laptopLbl.Name = "laptopLbl";
+            this.laptopLbl.Size = new System.Drawing.Size(57, 20);
+            this.laptopLbl.TabIndex = 4;
+            this.laptopLbl.Text = "label1";
             // 
             // label4
             // 
@@ -278,9 +580,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(24, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 19);
+            this.label2.Size = new System.Drawing.Size(161, 19);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Bunny PC STORE";
+            this.label2.Text = "ToKomp PC STORE";
             // 
             // EmpNameLbl
             // 
@@ -419,7 +721,7 @@
             // 
             // SignOutBtn
             // 
-            this.SignOutBtn.Location = new System.Drawing.Point(45, 458);
+            this.SignOutBtn.Location = new System.Drawing.Point(45, 602);
             this.SignOutBtn.Name = "SignOutBtn";
             this.SignOutBtn.Size = new System.Drawing.Size(113, 39);
             this.SignOutBtn.TabIndex = 12;
@@ -430,7 +732,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(3, 458);
+            this.pictureBox7.Location = new System.Drawing.Point(3, 602);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(40, 39);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -445,308 +747,56 @@
             this.panel8.Size = new System.Drawing.Size(180, 50);
             this.panel8.TabIndex = 29;
             // 
-            // laptopLbl
+            // button1
             // 
-            this.laptopLbl.AutoSize = true;
-            this.laptopLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laptopLbl.Location = new System.Drawing.Point(94, 45);
-            this.laptopLbl.Name = "laptopLbl";
-            this.laptopLbl.Size = new System.Drawing.Size(57, 20);
-            this.laptopLbl.TabIndex = 4;
-            this.laptopLbl.Text = "label1";
+            this.button1.Location = new System.Drawing.Point(45, 420);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 39);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Transactions";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // HardwareLbl
+            // pictureBox17
             // 
-            this.HardwareLbl.AutoSize = true;
-            this.HardwareLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HardwareLbl.Location = new System.Drawing.Point(96, 45);
-            this.HardwareLbl.Name = "HardwareLbl";
-            this.HardwareLbl.Size = new System.Drawing.Size(57, 20);
-            this.HardwareLbl.TabIndex = 5;
-            this.HardwareLbl.Text = "label1";
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(3, 420);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 31;
+            this.pictureBox17.TabStop = false;
             // 
-            // GadgetLbl
+            // button2
             // 
-            this.GadgetLbl.AutoSize = true;
-            this.GadgetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GadgetLbl.Location = new System.Drawing.Point(101, 44);
-            this.GadgetLbl.Name = "GadgetLbl";
-            this.GadgetLbl.Size = new System.Drawing.Size(57, 20);
-            this.GadgetLbl.TabIndex = 6;
-            this.GadgetLbl.Text = "label1";
+            this.button2.Location = new System.Drawing.Point(45, 497);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 39);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "Delivery";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
+            // pictureBox18
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Jumlah Produk Per Kategori";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 254);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(247, 25);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Produk Terjual Per Kategori";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Chocolate;
-            this.panel9.Controls.Add(this.SoldGadgetLbl);
-            this.panel9.Controls.Add(this.label9);
-            this.panel9.Controls.Add(this.pictureBox12);
-            this.panel9.Location = new System.Drawing.Point(431, 282);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(178, 84);
-            this.panel9.TabIndex = 8;
-            // 
-            // SoldGadgetLbl
-            // 
-            this.SoldGadgetLbl.AutoSize = true;
-            this.SoldGadgetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoldGadgetLbl.Location = new System.Drawing.Point(101, 44);
-            this.SoldGadgetLbl.Name = "SoldGadgetLbl";
-            this.SoldGadgetLbl.Size = new System.Drawing.Size(57, 20);
-            this.SoldGadgetLbl.TabIndex = 6;
-            this.SoldGadgetLbl.Text = "label1";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(99, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 19);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Gadget";
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(0, 1);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(78, 83);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 1;
-            this.pictureBox12.TabStop = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Chocolate;
-            this.panel10.Controls.Add(this.SoldHardwareLbl);
-            this.panel10.Controls.Add(this.label11);
-            this.panel10.Controls.Add(this.pictureBox13);
-            this.panel10.Location = new System.Drawing.Point(219, 281);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(175, 84);
-            this.panel10.TabIndex = 7;
-            // 
-            // SoldHardwareLbl
-            // 
-            this.SoldHardwareLbl.AutoSize = true;
-            this.SoldHardwareLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoldHardwareLbl.Location = new System.Drawing.Point(96, 45);
-            this.SoldHardwareLbl.Name = "SoldHardwareLbl";
-            this.SoldHardwareLbl.Size = new System.Drawing.Size(57, 20);
-            this.SoldHardwareLbl.TabIndex = 5;
-            this.SoldHardwareLbl.Text = "label1";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(81, 10);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 19);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Hardware";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(0, 1);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(78, 83);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 1;
-            this.pictureBox13.TabStop = false;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Chocolate;
-            this.panel11.Controls.Add(this.SoldLaptopLbl);
-            this.panel11.Controls.Add(this.label13);
-            this.panel11.Controls.Add(this.pictureBox14);
-            this.panel11.Location = new System.Drawing.Point(16, 281);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(169, 84);
-            this.panel11.TabIndex = 6;
-            // 
-            // SoldLaptopLbl
-            // 
-            this.SoldLaptopLbl.AutoSize = true;
-            this.SoldLaptopLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoldLaptopLbl.Location = new System.Drawing.Point(94, 45);
-            this.SoldLaptopLbl.Name = "SoldLaptopLbl";
-            this.SoldLaptopLbl.Size = new System.Drawing.Size(57, 20);
-            this.SoldLaptopLbl.TabIndex = 4;
-            this.SoldLaptopLbl.Text = "label1";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(94, 10);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 19);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Laptop";
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(78, 83);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 0;
-            this.pictureBox14.TabStop = false;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Chocolate;
-            this.panel12.Controls.Add(this.SparePartLbl);
-            this.panel12.Controls.Add(this.label10);
-            this.panel12.Controls.Add(this.pictureBox15);
-            this.panel12.Location = new System.Drawing.Point(649, 157);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(175, 84);
-            this.panel12.TabIndex = 10;
-            // 
-            // SparePartLbl
-            // 
-            this.SparePartLbl.AutoSize = true;
-            this.SparePartLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SparePartLbl.Location = new System.Drawing.Point(96, 45);
-            this.SparePartLbl.Name = "SparePartLbl";
-            this.SparePartLbl.Size = new System.Drawing.Size(57, 20);
-            this.SparePartLbl.TabIndex = 5;
-            this.SparePartLbl.Text = "label1";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(81, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 19);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Komponen";
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(0, 1);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(78, 83);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 1;
-            this.pictureBox15.TabStop = false;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.Chocolate;
-            this.panel13.Controls.Add(this.SoldSparePartLbl);
-            this.panel13.Controls.Add(this.label14);
-            this.panel13.Controls.Add(this.pictureBox16);
-            this.panel13.Location = new System.Drawing.Point(648, 283);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(175, 84);
-            this.panel13.TabIndex = 11;
-            // 
-            // SoldSparePartLbl
-            // 
-            this.SoldSparePartLbl.AutoSize = true;
-            this.SoldSparePartLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoldSparePartLbl.Location = new System.Drawing.Point(96, 45);
-            this.SoldSparePartLbl.Name = "SoldSparePartLbl";
-            this.SoldSparePartLbl.Size = new System.Drawing.Size(57, 20);
-            this.SoldSparePartLbl.TabIndex = 5;
-            this.SoldSparePartLbl.Text = "label1";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(81, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(94, 19);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Komponen";
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(0, 1);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(78, 83);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 1;
-            this.pictureBox16.TabStop = false;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.Teal;
-            this.panel14.Controls.Add(this.SaldoLbl);
-            this.panel14.Controls.Add(this.label12);
-            this.panel14.Controls.Add(this.label8);
-            this.panel14.Location = new System.Drawing.Point(36, 458);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(766, 68);
-            this.panel14.TabIndex = 12;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(270, 24);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Saldo Total Pendapatan:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(401, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 24);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Rp.";
-            // 
-            // SaldoLbl
-            // 
-            this.SaldoLbl.AutoSize = true;
-            this.SaldoLbl.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaldoLbl.Location = new System.Drawing.Point(647, 20);
-            this.SaldoLbl.Name = "SaldoLbl";
-            this.SaldoLbl.Size = new System.Drawing.Size(86, 24);
-            this.SaldoLbl.TabIndex = 2;
-            this.SaldoLbl.Text = "label15";
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(3, 497);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 33;
+            this.pictureBox18.TabStop = false;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(1015, 551);
+            this.ClientSize = new System.Drawing.Size(1015, 653);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.SignOutBtn);
             this.Controls.Add(this.pictureBox6);
@@ -768,6 +818,23 @@
             this.Text = "Home";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -791,23 +858,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -874,5 +926,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label SaldoLbl;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox18;
     }
 }

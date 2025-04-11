@@ -24,7 +24,7 @@ namespace toko_laptop_tugas
         }
 
         // Gunakan koneksi global
-        SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-UB2KSKP\SQLEXPRESS;Initial Catalog=db_toko_laptop_tugas;Integrated Security=True");
+        SqlConnection Conn = new SqlConnection(DBConnection.ConnectionString);
 
         private void GetCustomer()
         {
@@ -445,7 +445,19 @@ namespace toko_laptop_tugas
             BillsDGV.Refresh();
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiBilling = new Transaksi();
+            transaksiBilling.Show();
+            this.Hide();
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Delivery deliveryBilling = new Delivery();
+            deliveryBilling.Show();
+            this.Hide();
+        }
 
         private void ProductsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

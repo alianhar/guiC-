@@ -51,15 +51,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEditProfile = new System.Windows.Forms.Button();
             this.TglLahirDTP = new System.Windows.Forms.DateTimePicker();
             this.AddressTb = new System.Windows.Forms.TextBox();
             this.PhoneTb = new System.Windows.Forms.TextBox();
-            this.UsernameTb = new System.Windows.Forms.TextBox();
+            this.NameTb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnEditProfile = new System.Windows.Forms.Button();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -72,11 +76,13 @@
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // SignOutBtn
             // 
-            this.SignOutBtn.Location = new System.Drawing.Point(44, 455);
+            this.SignOutBtn.Location = new System.Drawing.Point(44, 594);
             this.SignOutBtn.Name = "SignOutBtn";
             this.SignOutBtn.Size = new System.Drawing.Size(113, 39);
             this.SignOutBtn.TabIndex = 42;
@@ -229,7 +235,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(2, 455);
+            this.pictureBox7.Location = new System.Drawing.Point(2, 594);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(40, 39);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,32 +294,42 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnEditProfile);
             this.panel1.Controls.Add(this.TglLahirDTP);
             this.panel1.Controls.Add(this.AddressTb);
             this.panel1.Controls.Add(this.PhoneTb);
-            this.panel1.Controls.Add(this.UsernameTb);
+            this.panel1.Controls.Add(this.NameTb);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(178, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(623, 557);
+            this.panel1.Size = new System.Drawing.Size(623, 636);
             this.panel1.TabIndex = 30;
+            // 
+            // btnEditProfile
+            // 
+            this.btnEditProfile.Location = new System.Drawing.Point(164, 448);
+            this.btnEditProfile.Name = "btnEditProfile";
+            this.btnEditProfile.Size = new System.Drawing.Size(186, 33);
+            this.btnEditProfile.TabIndex = 10;
+            this.btnEditProfile.Text = "Edit Profile";
+            this.btnEditProfile.UseVisualStyleBackColor = true;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
             // 
             // TglLahirDTP
             // 
-            this.TglLahirDTP.Location = new System.Drawing.Point(143, 365);
+            this.TglLahirDTP.Location = new System.Drawing.Point(143, 377);
             this.TglLahirDTP.Name = "TglLahirDTP";
             this.TglLahirDTP.Size = new System.Drawing.Size(208, 20);
             this.TglLahirDTP.TabIndex = 9;
             // 
             // AddressTb
             // 
-            this.AddressTb.Location = new System.Drawing.Point(143, 265);
+            this.AddressTb.Location = new System.Drawing.Point(143, 277);
             this.AddressTb.Multiline = true;
             this.AddressTb.Name = "AddressTb";
             this.AddressTb.Size = new System.Drawing.Size(229, 75);
@@ -321,23 +337,23 @@
             // 
             // PhoneTb
             // 
-            this.PhoneTb.Location = new System.Drawing.Point(143, 210);
+            this.PhoneTb.Location = new System.Drawing.Point(143, 222);
             this.PhoneTb.Name = "PhoneTb";
             this.PhoneTb.Size = new System.Drawing.Size(229, 20);
             this.PhoneTb.TabIndex = 7;
             // 
-            // UsernameTb
+            // NameTb
             // 
-            this.UsernameTb.Location = new System.Drawing.Point(143, 157);
-            this.UsernameTb.Name = "UsernameTb";
-            this.UsernameTb.Size = new System.Drawing.Size(229, 20);
-            this.UsernameTb.TabIndex = 6;
+            this.NameTb.Location = new System.Drawing.Point(143, 169);
+            this.NameTb.Name = "NameTb";
+            this.NameTb.Size = new System.Drawing.Size(229, 20);
+            this.NameTb.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 367);
+            this.label6.Location = new System.Drawing.Point(26, 379);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 18);
             this.label6.TabIndex = 5;
@@ -347,7 +363,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 264);
+            this.label5.Location = new System.Drawing.Point(26, 276);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 18);
             this.label5.TabIndex = 4;
@@ -357,38 +373,72 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 209);
+            this.label4.Location = new System.Drawing.Point(26, 221);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "Phone";
             // 
-            // label1
+            // pictureBox18
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 159);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Username";
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(2, 484);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 71;
+            this.pictureBox18.TabStop = false;
             // 
-            // btnEditProfile
+            // button7
             // 
-            this.btnEditProfile.Location = new System.Drawing.Point(164, 436);
-            this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Size = new System.Drawing.Size(186, 33);
-            this.btnEditProfile.TabIndex = 10;
-            this.btnEditProfile.Text = "Edit Profile";
-            this.btnEditProfile.UseVisualStyleBackColor = true;
-            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
+            this.button7.Location = new System.Drawing.Point(44, 484);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(113, 39);
+            this.button7.TabIndex = 70;
+            this.button7.Text = "Delivery";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(2, 411);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 69;
+            this.pictureBox17.TabStop = false;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(44, 411);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(113, 39);
+            this.button8.TabIndex = 68;
+            this.button8.Text = "Transactions";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(26, 169);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 18);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Nama";
             // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(801, 551);
+            this.ClientSize = new System.Drawing.Size(801, 645);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.SignOutBtn);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -423,6 +473,8 @@
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -452,13 +504,17 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker TglLahirDTP;
         private System.Windows.Forms.TextBox AddressTb;
         private System.Windows.Forms.TextBox PhoneTb;
-        private System.Windows.Forms.TextBox UsernameTb;
+        private System.Windows.Forms.TextBox NameTb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnEditProfile;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -77,6 +77,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -94,6 +98,8 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox8
@@ -220,7 +226,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(2, 455);
+            this.pictureBox7.Location = new System.Drawing.Point(2, 592);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(40, 39);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,7 +235,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(44, 455);
+            this.button6.Location = new System.Drawing.Point(44, 592);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(113, 39);
             this.button6.TabIndex = 42;
@@ -343,9 +349,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(24, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 19);
+            this.label2.Size = new System.Drawing.Size(161, 19);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Bunny PC STORE";
+            this.label2.Text = "ToKomp PC STORE";
             // 
             // btnReset
             // 
@@ -380,7 +386,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(178, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 565);
+            this.panel1.Size = new System.Drawing.Size(944, 634);
             this.panel1.TabIndex = 31;
             // 
             // label11
@@ -398,7 +404,7 @@
             this.TransactionsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TransactionsDGV.Location = new System.Drawing.Point(413, 394);
             this.TransactionsDGV.Name = "TransactionsDGV";
-            this.TransactionsDGV.Size = new System.Drawing.Size(465, 156);
+            this.TransactionsDGV.Size = new System.Drawing.Size(465, 221);
             this.TransactionsDGV.TabIndex = 20;
             this.TransactionsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TransactionsDGV_CellContentClick);
             // 
@@ -407,7 +413,7 @@
             this.ProductsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductsDGV.Location = new System.Drawing.Point(19, 394);
             this.ProductsDGV.Name = "ProductsDGV";
-            this.ProductsDGV.Size = new System.Drawing.Size(322, 156);
+            this.ProductsDGV.Size = new System.Drawing.Size(354, 221);
             this.ProductsDGV.TabIndex = 4;
             this.ProductsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsDGV_CellContentClick);
             // 
@@ -588,12 +594,56 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(2, 485);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 75;
+            this.pictureBox18.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(44, 485);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(113, 39);
+            this.button7.TabIndex = 74;
+            this.button7.Text = "Delivery";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(2, 417);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 73;
+            this.pictureBox17.TabStop = false;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(44, 417);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(113, 39);
+            this.button8.TabIndex = 72;
+            this.button8.Text = "Transactions";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Billing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(1134, 522);
+            this.ClientSize = new System.Drawing.Size(1120, 653);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.btnMenuProduk);
@@ -638,6 +688,8 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -693,5 +745,9 @@
         private System.Windows.Forms.Label TotalLbl;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Button button8;
     }
 }
