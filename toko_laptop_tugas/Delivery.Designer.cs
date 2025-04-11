@@ -32,25 +32,35 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CustomersDGV = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.DeliveryNotesTb = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.DeliveryFeeTb = new System.Windows.Forms.TextBox();
+            this.StatusDeliveryCmb = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.AlamatTb = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TotalTb = new System.Windows.Forms.TextBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnAddBill = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.QtyTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.PrNameTb = new System.Windows.Forms.TextBox();
-            this.PrPriceTb = new System.Windows.Forms.TextBox();
+            this.CustomerTb = new System.Windows.Forms.TextBox();
+            this.ProdukTb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ProductsDGV = new System.Windows.Forms.DataGridView();
+            this.DeliveryDGV = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.EmpNameLbl = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btnMenuProduk = new System.Windows.Forms.Button();
-            this.EmpNameLbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -66,14 +76,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.CustAddTb = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.CatPrCmb = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomersDGV)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductsDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeliveryDGV)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -108,36 +115,140 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.CustomersDGV);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.ProductsDGV);
+            this.panel1.Controls.Add(this.DeliveryDGV);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(178, -3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(829, 634);
             this.panel1.TabIndex = 48;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(16, 70);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 19);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Data Customer";
+            // 
+            // CustomersDGV
+            // 
+            this.CustomersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustomersDGV.Location = new System.Drawing.Point(7, 92);
+            this.CustomersDGV.Name = "CustomersDGV";
+            this.CustomersDGV.Size = new System.Drawing.Size(366, 221);
+            this.CustomersDGV.TabIndex = 31;
+            this.CustomersDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomersDGV_CellClick);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.panel4.Controls.Add(this.CatPrCmb);
+            this.panel4.Controls.Add(this.DeliveryNotesTb);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.DeliveryFeeTb);
+            this.panel4.Controls.Add(this.StatusDeliveryCmb);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.CustAddTb);
+            this.panel4.Controls.Add(this.AlamatTb);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.TotalTb);
             this.panel4.Controls.Add(this.btnReset);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.btnAddBill);
+            this.panel4.Controls.Add(this.btnConfirm);
             this.panel4.Controls.Add(this.QtyTb);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.PrNameTb);
-            this.panel4.Controls.Add(this.PrPriceTb);
+            this.panel4.Controls.Add(this.CustomerTb);
+            this.panel4.Controls.Add(this.ProdukTb);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(7, 319);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(812, 302);
             this.panel4.TabIndex = 30;
+            // 
+            // DeliveryNotesTb
+            // 
+            this.DeliveryNotesTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeliveryNotesTb.Location = new System.Drawing.Point(467, 90);
+            this.DeliveryNotesTb.Multiline = true;
+            this.DeliveryNotesTb.Name = "DeliveryNotesTb";
+            this.DeliveryNotesTb.Size = new System.Drawing.Size(178, 83);
+            this.DeliveryNotesTb.TabIndex = 40;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(464, 69);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(125, 18);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Catatan Delivery";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(231, 131);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 18);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Delivery Fee";
+            // 
+            // DeliveryFeeTb
+            // 
+            this.DeliveryFeeTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeliveryFeeTb.Location = new System.Drawing.Point(234, 152);
+            this.DeliveryFeeTb.Name = "DeliveryFeeTb";
+            this.DeliveryFeeTb.Size = new System.Drawing.Size(178, 25);
+            this.DeliveryFeeTb.TabIndex = 37;
+            // 
+            // StatusDeliveryCmb
+            // 
+            this.StatusDeliveryCmb.FormattingEnabled = true;
+            this.StatusDeliveryCmb.Items.AddRange(new object[] {
+            "Pending",
+            "dikemas",
+            "perjalanan",
+            "sampai_tujuan"});
+            this.StatusDeliveryCmb.Location = new System.Drawing.Point(231, 91);
+            this.StatusDeliveryCmb.Name = "StatusDeliveryCmb";
+            this.StatusDeliveryCmb.Size = new System.Drawing.Size(194, 21);
+            this.StatusDeliveryCmb.TabIndex = 36;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(231, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 18);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Status Delivery";
+            // 
+            // AlamatTb
+            // 
+            this.AlamatTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AlamatTb.Location = new System.Drawing.Point(22, 90);
+            this.AlamatTb.Multiline = true;
+            this.AlamatTb.Name = "AlamatTb";
+            this.AlamatTb.Size = new System.Drawing.Size(178, 83);
+            this.AlamatTb.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 18);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Alamat";
             // 
             // label3
             // 
@@ -149,13 +260,13 @@
             this.label3.TabIndex = 32;
             this.label3.Text = "Total Harga";
             // 
-            // textBox1
+            // TotalTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(467, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 25);
-            this.textBox1.TabIndex = 31;
+            this.TotalTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalTb.Location = new System.Drawing.Point(467, 26);
+            this.TotalTb.Name = "TotalTb";
+            this.TotalTb.Size = new System.Drawing.Size(178, 25);
+            this.TotalTb.TabIndex = 31;
             // 
             // btnReset
             // 
@@ -180,18 +291,19 @@
             this.label9.TabIndex = 30;
             this.label9.Text = "Nama Produk";
             // 
-            // btnAddBill
+            // btnConfirm
             // 
-            this.btnAddBill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddBill.Location = new System.Drawing.Point(13, 219);
-            this.btnAddBill.Name = "btnAddBill";
-            this.btnAddBill.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAddBill.Size = new System.Drawing.Size(113, 42);
-            this.btnAddBill.TabIndex = 28;
-            this.btnAddBill.Text = "Konfirmasi";
-            this.btnAddBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAddBill.UseVisualStyleBackColor = true;
+            this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnConfirm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfirm.Location = new System.Drawing.Point(13, 219);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnConfirm.Size = new System.Drawing.Size(113, 42);
+            this.btnConfirm.TabIndex = 28;
+            this.btnConfirm.Text = "Konfirmasi";
+            this.btnConfirm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // QtyTb
             // 
@@ -211,21 +323,21 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Quantity";
             // 
-            // PrNameTb
+            // CustomerTb
             // 
-            this.PrNameTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrNameTb.Location = new System.Drawing.Point(13, 26);
-            this.PrNameTb.Name = "PrNameTb";
-            this.PrNameTb.Size = new System.Drawing.Size(162, 25);
-            this.PrNameTb.TabIndex = 25;
+            this.CustomerTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerTb.Location = new System.Drawing.Point(13, 26);
+            this.CustomerTb.Name = "CustomerTb";
+            this.CustomerTb.Size = new System.Drawing.Size(162, 25);
+            this.CustomerTb.TabIndex = 25;
             // 
-            // PrPriceTb
+            // ProdukTb
             // 
-            this.PrPriceTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrPriceTb.Location = new System.Drawing.Point(188, 26);
-            this.PrPriceTb.Name = "PrPriceTb";
-            this.PrPriceTb.Size = new System.Drawing.Size(178, 25);
-            this.PrPriceTb.TabIndex = 23;
+            this.ProdukTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProdukTb.Location = new System.Drawing.Point(188, 26);
+            this.ProdukTb.Name = "ProdukTb";
+            this.ProdukTb.Size = new System.Drawing.Size(178, 25);
+            this.ProdukTb.TabIndex = 23;
             // 
             // label6
             // 
@@ -241,19 +353,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 70);
+            this.label1.Location = new System.Drawing.Point(385, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 19);
             this.label1.TabIndex = 22;
             this.label1.Text = "Data Delivery";
             // 
-            // ProductsDGV
+            // DeliveryDGV
             // 
-            this.ProductsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductsDGV.Location = new System.Drawing.Point(3, 92);
-            this.ProductsDGV.Name = "ProductsDGV";
-            this.ProductsDGV.Size = new System.Drawing.Size(822, 221);
-            this.ProductsDGV.TabIndex = 4;
+            this.DeliveryDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DeliveryDGV.Location = new System.Drawing.Point(379, 92);
+            this.DeliveryDGV.Name = "DeliveryDGV";
+            this.DeliveryDGV.Size = new System.Drawing.Size(446, 221);
+            this.DeliveryDGV.TabIndex = 4;
+            this.DeliveryDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryDGV_CellClick);
             // 
             // panel2
             // 
@@ -265,6 +378,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(828, 61);
             this.panel2.TabIndex = 0;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(748, 6);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(80, 55);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 46;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // EmpNameLbl
+            // 
+            this.EmpNameLbl.AutoSize = true;
+            this.EmpNameLbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpNameLbl.Location = new System.Drawing.Point(654, 18);
+            this.EmpNameLbl.Name = "EmpNameLbl";
+            this.EmpNameLbl.Size = new System.Drawing.Size(88, 19);
+            this.EmpNameLbl.TabIndex = 47;
+            this.EmpNameLbl.Text = "EmpName";
             // 
             // button3
             // 
@@ -284,17 +418,6 @@
             this.panel5.Size = new System.Drawing.Size(180, 50);
             this.panel5.TabIndex = 61;
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(748, 6);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(80, 55);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 46;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
             // btnMenuProduk
             // 
             this.btnMenuProduk.Location = new System.Drawing.Point(44, 135);
@@ -304,16 +427,6 @@
             this.btnMenuProduk.Text = "Products";
             this.btnMenuProduk.UseVisualStyleBackColor = true;
             this.btnMenuProduk.Click += new System.EventHandler(this.btnMenuProduk_Click);
-            // 
-            // EmpNameLbl
-            // 
-            this.EmpNameLbl.AutoSize = true;
-            this.EmpNameLbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmpNameLbl.Location = new System.Drawing.Point(654, 18);
-            this.EmpNameLbl.Name = "EmpNameLbl";
-            this.EmpNameLbl.Size = new System.Drawing.Size(88, 19);
-            this.EmpNameLbl.TabIndex = 47;
-            this.EmpNameLbl.Text = "EmpName";
             // 
             // button1
             // 
@@ -470,47 +583,6 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // CustAddTb
-            // 
-            this.CustAddTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustAddTb.Location = new System.Drawing.Point(22, 90);
-            this.CustAddTb.Multiline = true;
-            this.CustAddTb.Name = "CustAddTb";
-            this.CustAddTb.Size = new System.Drawing.Size(178, 83);
-            this.CustAddTb.TabIndex = 34;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 18);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Alamat";
-            // 
-            // CatPrCmb
-            // 
-            this.CatPrCmb.FormattingEnabled = true;
-            this.CatPrCmb.Items.AddRange(new object[] {
-            "dikemas",
-            "perjalanan",
-            "sampai_tujuan"});
-            this.CatPrCmb.Location = new System.Drawing.Point(231, 91);
-            this.CatPrCmb.Name = "CatPrCmb";
-            this.CatPrCmb.Size = new System.Drawing.Size(194, 21);
-            this.CatPrCmb.TabIndex = 36;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(231, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 18);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Status Delivery";
-            // 
             // Delivery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,9 +617,10 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomersDGV)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductsDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeliveryDGV)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -568,7 +641,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView ProductsDGV;
+        private System.Windows.Forms.DataGridView DeliveryDGV;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel5;
@@ -593,18 +666,24 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TotalTb;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnAddBill;
+        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.TextBox QtyTb;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox PrNameTb;
-        private System.Windows.Forms.TextBox PrPriceTb;
+        private System.Windows.Forms.TextBox CustomerTb;
+        private System.Windows.Forms.TextBox ProdukTb;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox CustAddTb;
+        private System.Windows.Forms.TextBox AlamatTb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox CatPrCmb;
+        private System.Windows.Forms.ComboBox StatusDeliveryCmb;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView CustomersDGV;
+        private System.Windows.Forms.TextBox DeliveryNotesTb;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox DeliveryFeeTb;
     }
 }

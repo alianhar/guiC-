@@ -123,13 +123,6 @@ namespace toko_laptop_tugas
             }
         }
 
-
-
-
-
-
-
-
         //route halaman
         private void button1_Click(object sender, EventArgs e)
         {
@@ -272,6 +265,13 @@ namespace toko_laptop_tugas
                     if (Conn.State == ConnectionState.Closed)
                         Conn.Open();
 
+                    // Ambil status sebelumnya dulu
+                    string getOldStatusQuery = "SELECT PaymentStatus FROM BillTbl WHERE BNum = @id";
+                    SqlCommand getStatusCmd = new SqlCommand(getOldStatusQuery, Conn);
+                    getStatusCmd.Parameters.AddWithValue("@id", transaksiId);
+                    string oldStatus = getStatusCmd.ExecuteScalar()?.ToString();
+
+                    // Update status baru
                     string query = "UPDATE BillTbl SET PaymentStatus = @status WHERE BNum = @id";
                     SqlCommand cmd = new SqlCommand(query, Conn);
                     cmd.Parameters.AddWithValue("@status", selectedStatus);
@@ -279,6 +279,39 @@ namespace toko_laptop_tugas
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Status pembayaran berhasil diperbarui!");
+
+                    // Kalau status baru adalah Rejected DAN sebelumnya bukan Rejected, kembalikan stok
+                    if (selectedStatus == "rejected" && oldStatus != "rejected")
+                    {
+                        string selectDetailQuery = "SELECT ProductId, Quantity FROM BillDetailTbl WHERE BillId = @id";
+                        SqlCommand detailCmd = new SqlCommand(selectDetailQuery, Conn);
+                        detailCmd.Parameters.AddWithValue("@id", transaksiId);
+
+                        SqlDataReader reader = detailCmd.ExecuteReader();
+                        List<Tuple<int, int>> returnedProducts = new List<Tuple<int, int>>();
+
+                        while (reader.Read())
+                        {
+                            int productId = Convert.ToInt32(reader["ProductId"]);
+                            int quantity = Convert.ToInt32(reader["Quantity"]);
+                            returnedProducts.Add(Tuple.Create(productId, quantity));
+                        }
+
+                        reader.Close();
+
+                        // Update stok
+                        foreach (var item in returnedProducts)
+                        {
+                            int productId = item.Item1;
+                            int quantity = item.Item2;
+
+                            string updateStockQuery = "UPDATE ProductTbl SET PrQty = PrQty + @qty WHERE PrId = @pid";
+                            SqlCommand updateStockCmd = new SqlCommand(updateStockQuery, Conn);
+                            updateStockCmd.Parameters.AddWithValue("@qty", quantity);
+                            updateStockCmd.Parameters.AddWithValue("@pid", productId);
+                            updateStockCmd.ExecuteNonQuery();
+                        }
+                    }
 
                     // Refresh ulang transaksi customer
                     if (selectedCustomerRowIndex >= 0)
@@ -296,6 +329,7 @@ namespace toko_laptop_tugas
                     if (Conn.State == ConnectionState.Open)
                         Conn.Close();
                 }
+
             }
             else
             {
