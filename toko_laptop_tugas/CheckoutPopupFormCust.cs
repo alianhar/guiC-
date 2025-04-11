@@ -64,7 +64,12 @@ namespace toko_laptop_tugas
         {
             // Simpan gambar ke file terlebih dahulu
             string savePath = "";
-            if (pictureBoxPreview.Image != null || addressDeliveryTb.Text = "")
+            if (string.IsNullOrWhiteSpace(addressDeliveryTb.Text))
+            {
+                MessageBox.Show("Alamat pengiriman tidak boleh kosong!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (pictureBoxPreview.Image != null)
             {
                 string folderPath = Path.Combine(Application.StartupPath, "BuktiTransfer");
                 if (!Directory.Exists(folderPath))
@@ -76,6 +81,8 @@ namespace toko_laptop_tugas
                 pictureBoxPreview.Image.Save(savePath, System.Drawing.Imaging.ImageFormat.Jpeg);
                 MessageBox.Show("Gambar berhasil disimpan", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            
+
             else
             {
                 MessageBox.Show("Tidak ada gambar yang dipilih!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -118,11 +125,27 @@ namespace toko_laptop_tugas
                     insertDetail.Parameters.AddWithValue("@ProductId", item.ProductId);
                     insertDetail.Parameters.AddWithValue("@Qty", item.Qty);
                     insertDetail.ExecuteNonQuery();
+
+                    // Update stok produk: Kurangi stok sesuai dengan jumlah item yang dipesan
+                    string updateStockQuery = "UPDATE ProductTbl SET PrQty = PrQty - @Qty WHERE PrId = @ProductId";
+                    SqlCommand updateStockCmd = new SqlCommand(updateStockQuery, conn, transaction);
+                    updateStockCmd.Parameters.AddWithValue("@Qty", item.Qty);
+                    updateStockCmd.Parameters.AddWithValue("@ProductId", item.ProductId);
+                    updateStockCmd.ExecuteNonQuery();
                 }
 
                 transaction.Commit();
                 MessageBox.Show("Transaksi berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
+                // --- Setelah transaksi berhasil: Tutup form popup ---
+                this.Close();
+
+                // --- Jika ingin mereset DataGridView di form ProdukCust, panggil metodenya ---
+                // Pastikan form induk (ProdukCust) sudah diset sebagai owner.
+                if (this.Owner is ProdukCust parentForm)
+                {
+                    parentForm.ResetBillDGV();
+                    parentForm.DisplayProducts();
+                }
             }
             catch (Exception ex)
             {

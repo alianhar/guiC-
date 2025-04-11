@@ -45,32 +45,62 @@ namespace toko_laptop_tugas
             key = 0;
         }
 
-        private void UpdateStock()
+        private void UpdateProductStock(int productId, int qtyToReduce)
         {
             try
             {
-                int NewQty = Stock - Convert.ToInt32(QtyTb.Text);
-
                 if (Conn.State == ConnectionState.Closed)
                     Conn.Open();
 
-                SqlCommand cmd = new SqlCommand("UPDATE ProductTbl SET PrQty=@PQ WHERE PrId=@PKey", Conn);
-                cmd.Parameters.AddWithValue("@PQ", NewQty);
-                cmd.Parameters.AddWithValue("@PKey", key);
+                string query = "UPDATE ProductTbl SET PrQty = PrQty - @qty WHERE PrId = @id";
+                SqlCommand cmd = new SqlCommand(query, Conn);
+                cmd.Parameters.AddWithValue("@qty", qtyToReduce);
+                cmd.Parameters.AddWithValue("@id", productId);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error di UpdateStock: " + ex.Message);
+                MessageBox.Show("Gagal update stok: " + ex.Message);
             }
             finally
             {
                 if (Conn.State == ConnectionState.Open)
                     Conn.Close();
-                // Refresh data produk setelah update stok
-                DisplayProducts();
             }
         }
+
+
+        private int GetCurrentStock(int productId)
+        {
+            int currentStock = 0;
+            try
+            {
+                if (Conn.State == ConnectionState.Closed)
+                    Conn.Open();
+
+                string query = "SELECT PrQty FROM ProductTbl WHERE PrId = @ProductId";
+                using (SqlCommand cmd = new SqlCommand(query, Conn))
+                {
+                    cmd.Parameters.AddWithValue("@ProductId", productId);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        currentStock = Convert.ToInt32(result);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error mengambil stok produk: " + ex.Message);
+            }
+            finally
+            {
+                if (Conn.State == ConnectionState.Open)
+                    Conn.Close();
+            }
+            return currentStock;
+        }
+
 
         //route halaman
         private void ProdukBtn_Click(object sender, EventArgs e)
@@ -123,10 +153,56 @@ namespace toko_laptop_tugas
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // Dictionary untuk total Qty tiap produk
+            Dictionary<int, (string productName, int totalQty)> productQtyDict = new Dictionary<int, (string, int)>();
+
+            foreach (DataGridViewRow row in BillDGV.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    int productId = Convert.ToInt32(row.Cells["ProductID"].Value);
+                    string productName = row.Cells["ProductName"].Value.ToString();
+                    int qty = Convert.ToInt32(row.Cells["Quantity"].Value);
+
+                    // Validasi jumlah negatif
+                    if (qty <= 0)
+                    {
+                        MessageBox.Show($"Jumlah untuk produk {productName} tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    if (productQtyDict.ContainsKey(productId))
+                    {
+                        productQtyDict[productId] = (productName, productQtyDict[productId].totalQty + qty);
+                    }
+                    else
+                    {
+                        productQtyDict[productId] = (productName, qty);
+                    }
+                }
+            }
+
+            // Validasi stok untuk setiap produk
+            foreach (var entry in productQtyDict)
+            {
+                int productId = entry.Key;
+                string productName = entry.Value.productName;
+                int totalQty = entry.Value.totalQty;
+
+                int currentStock = GetCurrentStock(productId);
+                if (totalQty > currentStock)
+                {
+                    MessageBox.Show($"Stok tidak cukup untuk produk {productName}. Dipilih: {totalQty}, Stok tersedia: {currentStock}",
+                                    "Stok Tidak Cukup", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+            // Kalau semua valid → lanjutkan
             List<BillItem> items = new List<BillItem>();
             foreach (DataGridViewRow row in BillDGV.Rows)
             {
-                if (!row.IsNewRow) // biar gak ambil row kosong
+                if (!row.IsNewRow)
                 {
                     items.Add(new BillItem
                     {
@@ -138,14 +214,16 @@ namespace toko_laptop_tugas
                     });
                 }
             }
-
-            CheckoutPopupFormCust checkout = new CheckoutPopupFormCust(items);
+            
+            CheckoutPopupFormCust checkout = new CheckoutPopupFormCust(items)
+            {
+                Owner = this
+            };
             checkout.ShowDialog();
         }
 
-        private void DisplayProducts()
+        public void DisplayProducts()
         {
-
             try
             {
                 if (Conn.State == ConnectionState.Closed)
@@ -169,7 +247,17 @@ namespace toko_laptop_tugas
             }
         }
 
-       
+
+        public void ResetBillDGV()
+        {
+            BillDGV.Rows.Clear();
+            TotalLbl.Text = "0";
+            n = 0;       // Variabel untuk penomoran baris
+            GrdTotal = 0;
+        }
+
+
+
         private void productsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) // Ensure the row index is valid
