@@ -41,29 +41,34 @@ namespace toko_laptop_tugas
                     Conn.Open();
 
                 string query = @"
-            SELECT 
-                b.BNum AS [No. Transaksi],
-                b.BDate AS [Tanggal],
-                b.CustName AS [Customer],
-                p.PrName AS [Nama Produk],
-                bd.Quantity AS [Jumlah],
-                b.Amt AS [Total Bayar],
-                b.DeliveryAddress AS [Alamat],
-                b.DeliveryStatus,
-                b.DeliveryFee,
-                dt.Notes AS [Catatan]
-            FROM 
-                BillTbl b
-            INNER JOIN 
-                BillDetailTbl bd ON b.BNum = bd.BillId
-            INNER JOIN 
-                ProductTbl p ON bd.ProductId = p.PrId
-            LEFT JOIN 
-                DeliveryTrackingTbl dt ON dt.BillId = b.BNum
-            WHERE 
-                b.CustId = @CustId AND b.PaymentStatus = 'Verified'
-            ORDER BY 
-                b.BDate DESC";
+                    SELECT 
+                        dt.TrackingId,
+                        e.EmpName AS [Diupdate Oleh],
+                        b.BNum AS [No. Transaksi],
+                        b.BDate AS [Tanggal],
+                        b.CustName AS [Customer],
+                        p.PrName AS [Nama Produk],
+                        bd.Quantity AS [Jumlah],
+                        b.Amt AS [Total Bayar],
+                        b.DeliveryAddress AS [Alamat],
+                        b.DeliveryStatus,
+                        b.DeliveryFee,
+                        dt.Notes AS [Catatan]
+                    FROM 
+                        BillTbl b
+                    INNER JOIN 
+                        BillDetailTbl bd ON b.BNum = bd.BillId
+                    INNER JOIN 
+                        ProductTbl p ON bd.ProductId = p.PrId
+                    LEFT JOIN 
+                        DeliveryTrackingTbl dt ON dt.BillId = b.BNum
+                    LEFT JOIN 
+                        EmployeeTbl e ON dt.UpdatedBy = e.EmpNum
+                    WHERE 
+                        b.CustId = @CustId AND b.PaymentStatus = 'Verified'
+                    ORDER BY 
+                        b.BDate DESC
+                    ";
 
                 SqlCommand cmd = new SqlCommand(query, Conn);
                 cmd.Parameters.AddWithValue("@CustId", custId);
@@ -72,6 +77,8 @@ namespace toko_laptop_tugas
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 DeliveryDGV.DataSource = dt;
+                DeliveryDGV.Columns["TrackingId"].Visible = false;
+
             }
             catch (Exception ex)
             {
@@ -318,6 +325,58 @@ namespace toko_laptop_tugas
                     Conn.Close();
             }
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            if (DeliveryDGV.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Apakah kamu yakin ingin menghapus data pengiriman ini?",
+                                                      "Konfirmasi", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        if (Conn.State == ConnectionState.Closed)
+                            Conn.Open();
+
+                        object trackIdObj = DeliveryDGV.SelectedRows[0].Cells["TrackingId"].Value;
+
+                        if (trackIdObj == DBNull.Value)
+                        {
+                            MessageBox.Show("Data ini belum memiliki ID pengiriman,tambah catatan, delivery fee atau ubah status delivery terlebih dahulu agar bisa menghapus!");
+                            return;
+                        }
+
+                        int deliveryId = Convert.ToInt32(trackIdObj);
+
+                        string query = "DELETE FROM DeliveryTrackingTbl WHERE TrackingId = @id";
+                        SqlCommand cmd = new SqlCommand(query, Conn);
+                        cmd.Parameters.AddWithValue("@id", deliveryId);
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Data pengiriman berhasil dihapus!");
+
+                        // Refresh tabel setelah hapus
+                        DisplayDeliveryByCustomer(GetSelectedCustomerId());
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Gagal menghapus data pengiriman: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (Conn.State == ConnectionState.Open)
+                            Conn.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Silakan pilih data pengiriman yang ingin dihapus.");
+            }
+        }
+
 
     }
 }
