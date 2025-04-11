@@ -64,7 +64,7 @@ namespace toko_laptop_tugas
         {
             // Simpan gambar ke file terlebih dahulu
             string savePath = "";
-            if (pictureBoxPreview.Image != null)
+            if (pictureBoxPreview.Image != null || addressDeliveryTb.Text = "")
             {
                 string folderPath = Path.Combine(Application.StartupPath, "BuktiTransfer");
                 if (!Directory.Exists(folderPath))
