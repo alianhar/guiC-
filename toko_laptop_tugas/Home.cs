@@ -35,7 +35,7 @@ namespace toko_laptop_tugas
         public void hitungTotalSaldo()
         {
             Conn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT SUM(Amt) FROM BillTbl", Conn);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT SUM(CAST(Amt AS BIGINT)) FROM BillTbl", Conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             SaldoLbl.Text = dt.Rows[0][0].ToString();

@@ -21,6 +21,10 @@ namespace toko_laptop_tugas
             GetCustomer();
             DisplayProduct();
             DisplayTransactions();
+
+            // Add these lines in the constructor or InitializeComponent method
+            //BillsDGV.CellClick += new DataGridViewCellEventHandler(BillsDGV_CellClick);
+            //btnDeleteBill.Click += new EventHandler(btnDeleteBill_Click);
         }
 
         // Gunakan koneksi global
@@ -61,7 +65,21 @@ namespace toko_laptop_tugas
                 if (Conn.State == ConnectionState.Closed)
                     Conn.Open();
 
-                string Query = "SELECT * FROM BillTbl";
+                string Query = @"
+                SELECT 
+                    b.BDate, 
+                    b.CustName, 
+                    b.EmpName, 
+                    b.Amt, 
+                    b.PaymentDate,
+                    SUM(d.Quantity) AS TotalQty
+                FROM BillTbl b
+                JOIN BillDetailTbl d ON b.BNum = d.BillId
+                WHERE CAST(b.BDate AS DATE) = CAST(GETDATE() AS DATE)
+                GROUP BY b.BDate, b.CustName, b.EmpName, b.Amt, b.PaymentDate
+                ORDER BY b.BDate DESC, b.PaymentDate DESC";
+
+
                 SqlDataAdapter sda = new SqlDataAdapter(Query, Conn);
                 SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
                 DataSet ds = new DataSet();
@@ -70,7 +88,7 @@ namespace toko_laptop_tugas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error di DisplayProduct: " + ex.Message);
+                MessageBox.Show("Error di DisplayTransactions: " + ex.Message);
             }
             finally
             {
@@ -78,6 +96,8 @@ namespace toko_laptop_tugas
                     Conn.Close();
             }
         }
+
+
 
         private void DisplayProduct()
         {
@@ -145,35 +165,10 @@ namespace toko_laptop_tugas
             key = 0;
         }
 
-        private void UpdateStock()
-        {
-            try
-            {
-                int NewQty = Stock - Convert.ToInt32(QtyTb.Text);
-
-                if (Conn.State == ConnectionState.Closed)
-                    Conn.Open();
-
-                SqlCommand cmd = new SqlCommand("UPDATE ProductTbl SET PrQty=@PQ WHERE PrId=@PKey", Conn);
-                cmd.Parameters.AddWithValue("@PQ", NewQty);
-                cmd.Parameters.AddWithValue("@PKey", key);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error di UpdateStock: " + ex.Message);
-            }
-            finally
-            {
-                if (Conn.State == ConnectionState.Open)
-                    Conn.Close();
-                // Refresh data produk setelah update stok
-                DisplayProduct();
-            }
-        }
-
+        
         int n = 0, GrdTotal = 0;
 
+        // First, remove the UpdateStock() call from btnAddBill_Click
         private void btnAddBill_Click(object sender, EventArgs e)
         {
             if (QtyTb.Text.Trim() == "" || Convert.ToInt32(QtyTb.Text) > Stock)
@@ -196,10 +191,9 @@ namespace toko_laptop_tugas
                 n++;
 
                 TotalLbl.Text = GrdTotal.ToString();
-                UpdateStock();
+                // UpdateStock() dipindahkan ke tombol Print
                 reset();
             }
-
         }
 
 
@@ -225,13 +219,176 @@ namespace toko_laptop_tugas
 
         }
 
+        // Add a method to validate stock before printing
+        private bool ValidateStock()
+        {
+            // Create a dictionary to track total quantity per product
+            Dictionary<int, int> productQuantities = new Dictionary<int, int>();
+            Dictionary<int, int> productStocks = new Dictionary<int, int>();
+
+            // First, get current stock for all products that are in the bill
+            try
+            {
+                if (Conn.State == ConnectionState.Closed)
+                    Conn.Open();
+
+                foreach (DataGridViewRow row in BillsDGV.Rows)
+                {
+                    if (row.Cells["ProductID"].Value == null)
+                        continue;
+
+                    int productId = Convert.ToInt32(row.Cells["ProductID"].Value);
+
+                    // Only query stock for products we haven't checked yet
+                    if (!productStocks.ContainsKey(productId))
+                    {
+                        SqlCommand cmd = new SqlCommand("SELECT PrQty FROM ProductTbl WHERE PrId = @PID", Conn);
+                        cmd.Parameters.AddWithValue("@PID", productId);
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            productStocks[productId] = Convert.ToInt32(result);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Produk dengan ID {productId} tidak ditemukan!");
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saat validasi stok: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (Conn.State == ConnectionState.Open)
+                    Conn.Close();
+            }
+
+            // Calculate total quantity per product in the bill
+            foreach (DataGridViewRow row in BillsDGV.Rows)
+            {
+                if (row.Cells["ProductID"].Value == null)
+                    continue;
+
+                int productId = Convert.ToInt32(row.Cells["ProductID"].Value);
+                int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
+
+                if (productQuantities.ContainsKey(productId))
+                {
+                    productQuantities[productId] += quantity;
+                }
+                else
+                {
+                    productQuantities[productId] = quantity;
+                }
+            }
+
+            // Validate if there's enough stock for each product
+            foreach (var product in productQuantities)
+            {
+                int productId = product.Key;
+                int totalQuantity = product.Value;
+
+                if (totalQuantity > productStocks[productId])
+                {
+                    MessageBox.Show($"Stok tidak cukup untuk produk ID {productId}. " +
+                                   $"Total yang diminta: {totalQuantity}, Stok tersedia: {productStocks[productId]}");
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // Method to update stock for all products in the bill
+        private void UpdateAllStock()
+        {
+            try
+            {
+                if (Conn.State == ConnectionState.Closed)
+                    Conn.Open();
+
+                // Group by product ID and sum quantities
+                Dictionary<int, int> productQuantities = new Dictionary<int, int>();
+
+                foreach (DataGridViewRow row in BillsDGV.Rows)
+                {
+                    if (row.Cells["ProductID"].Value == null)
+                        continue;
+
+                    int productId = Convert.ToInt32(row.Cells["ProductID"].Value);
+                    int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
+
+                    if (productQuantities.ContainsKey(productId))
+                    {
+                        productQuantities[productId] += quantity;
+                    }
+                    else
+                    {
+                        productQuantities[productId] = quantity;
+                    }
+                }
+
+                // Update stock for each product
+                foreach (var product in productQuantities)
+                {
+                    int productId = product.Key;
+                    int totalQuantity = product.Value;
+
+                    SqlCommand cmd = new SqlCommand("UPDATE ProductTbl SET PrQty = PrQty - @Qty WHERE PrId = @PID", Conn);
+                    cmd.Parameters.AddWithValue("@Qty", totalQuantity);
+                    cmd.Parameters.AddWithValue("@PID", productId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saat mengupdate stok: " + ex.Message);
+            }
+            finally
+            {
+                if (Conn.State == ConnectionState.Open)
+                    Conn.Close();
+
+                // Refresh product display after updating stock
+                DisplayProduct();
+            }
+        }
+
         string prodname;
+        // Update the btnPrint_Click method
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            // Validate if there are items in the bill
+            if (BillsDGV.Rows.Count <= 0 || GrdTotal <= 0)
+            {
+                MessageBox.Show("Silakan tambahkan produk ke bill terlebih dahulu!");
+                return;
+            }
+
+            // Validate stock before proceeding
+            if (!ValidateStock())
+            {
+                return; // Stop if validation fails
+            }
+
+            // All validations passed, proceed with the transaction
             int billId = InsertBill();
             InsertBillDetails(billId);
+
+            // Update stock for all products after validation and DB insertions
+            UpdateAllStock();
+            DisplayTransactions();
+            
+
+            // Print the bill
             printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 600, 600);
-            if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
                 printDocument1.Print();
             }
@@ -280,8 +437,9 @@ namespace toko_laptop_tugas
             try
             {
                 Conn.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO BillTbl(BDate, CustId, CustName, EmpName, Amt) OUTPUT INSERTED.BNum VALUES (@BD, @CI, @CN, @EN, @Am)", Conn);
+                SqlCommand cmd = new SqlCommand("INSERT INTO BillTbl(BDate, CustId, CustName, EmpName, Amt,PaymentDate) OUTPUT INSERTED.BNum VALUES (@BD, @CI, @CN, @EN, @Am,@Pd)", Conn);
                 cmd.Parameters.AddWithValue("@BD", DateTime.Today.Date);
+                cmd.Parameters.AddWithValue("@Pd", DateTime.Now);
                 cmd.Parameters.AddWithValue("@CI", CustIdCb.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@CN", CustNameTb.Text);
                 cmd.Parameters.AddWithValue("@EN", EmpNameLbl.Text);
@@ -306,26 +464,6 @@ namespace toko_laptop_tugas
 
         //int prodid, prodqty, prodprice, total, pos = 60;
 
-        private void btnMenuProduk_Click(object sender, EventArgs e)
-        {
-            Produk produkBilling = new Produk();
-            produkBilling.Show();
-            this.Hide();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Pegawai pegawaiBilling = new Pegawai();
-            pegawaiBilling.Show();
-            this.Hide();
-        }
-
-        private void btnMenuPelanggan_Click(object sender, EventArgs e)
-        {
-            Customer pelangganBilling = new Customer();
-            pelangganBilling.Show();
-            this.Hide();
-        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -445,18 +583,77 @@ namespace toko_laptop_tugas
             BillsDGV.Refresh();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+     
+
+        // Variable to track the currently selected row in BillsDGV
+        private int selectedRow = -1;
+
+        // Handle row selection in BillsDGV
+        private void BillsDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Transaksi transaksiBilling = new Transaksi();
-            transaksiBilling.Show();
-            this.Hide();
+            // Make sure we have a valid row index (not header row)
+            if (e.RowIndex >= 0 && e.RowIndex < BillsDGV.Rows.Count)
+            {
+                // Store the selected row index
+                selectedRow = e.RowIndex;
+
+                // Optional: Highlight the selected row for better UX
+                BillsDGV.ClearSelection();
+                BillsDGV.Rows[selectedRow].Selected = true;
+            }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        // Delete selected row from BillsDGV
+        private void btnDeleteBill_Click(object sender, EventArgs e)
         {
-            Delivery deliveryBilling = new Delivery();
-            deliveryBilling.Show();
-            this.Hide();
+            // Temporarily remove the event handler to prevent double triggers
+            btnDeleteBill.Click -= new EventHandler(btnDeleteBill_Click);
+
+            try
+            {
+                // Check if a row is selected
+                if (selectedRow == -1 || selectedRow >= BillsDGV.Rows.Count)
+                {
+                    MessageBox.Show("Pilih item yang akan dihapus terlebih dahulu!");
+                    return;
+                }
+
+                // Get the total amount of the selected row
+                int rowTotal = Convert.ToInt32(BillsDGV.Rows[selectedRow].Cells["Total"].Value);
+
+                // Subtract the row total from the grand total
+                GrdTotal -= rowTotal;
+
+                // Update the total label
+                TotalLbl.Text = GrdTotal.ToString();
+
+                // Remove the row from the DataGridView
+                BillsDGV.Rows.RemoveAt(selectedRow);
+
+                // Renumber the remaining rows in the "No" column
+                for (int i = 0; i < BillsDGV.Rows.Count; i++)
+                {
+                    if (BillsDGV.Rows[i].Cells["No"].Value != null)
+                    {
+                        BillsDGV.Rows[i].Cells["No"].Value = i + 1;
+                    }
+                }
+
+                // Show success message
+                MessageBox.Show("Item berhasil dihapus dari bill!");
+
+                // Reset the selected row index AFTER all operations are done
+                selectedRow = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saat menghapus item: " + ex.Message);
+            }
+            finally
+            {
+                // Re-add the event handler
+                btnDeleteBill.Click += new EventHandler(btnDeleteBill_Click);
+            }
         }
 
         private void ProductsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -478,6 +675,42 @@ namespace toko_laptop_tugas
         private void CustIdCb_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetCustName();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiBilling = new Transaksi();
+            transaksiBilling.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Delivery deliveryBilling = new Delivery();
+            deliveryBilling.Show();
+            this.Hide();
+        }
+
+
+        private void btnMenuProduk_Click(object sender, EventArgs e)
+        {
+            Produk produkBilling = new Produk();
+            produkBilling.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Pegawai pegawaiBilling = new Pegawai();
+            pegawaiBilling.Show();
+            this.Hide();
+        }
+
+        private void btnMenuPelanggan_Click(object sender, EventArgs e)
+        {
+            Customer pelangganBilling = new Customer();
+            pelangganBilling.Show();
+            this.Hide();
         }
     }
 }

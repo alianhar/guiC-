@@ -45,31 +45,7 @@ namespace toko_laptop_tugas
             key = 0;
         }
 
-        private void UpdateProductStock(int productId, int qtyToReduce)
-        {
-            try
-            {
-                if (Conn.State == ConnectionState.Closed)
-                    Conn.Open();
-
-                string query = "UPDATE ProductTbl SET PrQty = PrQty - @qty WHERE PrId = @id";
-                SqlCommand cmd = new SqlCommand(query, Conn);
-                cmd.Parameters.AddWithValue("@qty", qtyToReduce);
-                cmd.Parameters.AddWithValue("@id", productId);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Gagal update stok: " + ex.Message);
-            }
-            finally
-            {
-                if (Conn.State == ConnectionState.Open)
-                    Conn.Close();
-            }
-        }
-
-
+       
         private int GetCurrentStock(int productId)
         {
             int currentStock = 0;
