@@ -33,31 +33,32 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.CatPrCmb = new System.Windows.Forms.ComboBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.PaymentStatusCmb = new System.Windows.Forms.ComboBox();
             this.CustAddTb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnReset = new System.Windows.Forms.Button();
+            this.TotalHargaTb = new System.Windows.Forms.TextBox();
+            this.btnHapusTransaksi = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnAddBill = new System.Windows.Forms.Button();
+            this.btnUpdateTransaksi = new System.Windows.Forms.Button();
             this.QtyTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.PrNameTb = new System.Windows.Forms.TextBox();
-            this.PrPriceTb = new System.Windows.Forms.TextBox();
+            this.CustomerTb = new System.Windows.Forms.TextBox();
+            this.ProdukNameTb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ProductsDGV = new System.Windows.Forms.DataGridView();
+            this.TransaksiDGV = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.EmpNameLbl = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btnMenuProduk = new System.Windows.Forms.Button();
-            this.EmpNameLbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -70,14 +71,19 @@
             this.button5 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.CustomerDGV = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductsDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransaksiDGV)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -85,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -93,9 +100,9 @@
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(231, 69);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 18);
+            this.label4.Size = new System.Drawing.Size(117, 18);
             this.label4.TabIndex = 35;
-            this.label4.Text = "Status Delivery";
+            this.label4.Text = "Status Payment";
             // 
             // label5
             // 
@@ -110,9 +117,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.CustomerDGV);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.ProductsDGV);
+            this.panel1.Controls.Add(this.TransaksiDGV);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(180, 0);
             this.panel1.Name = "panel1";
@@ -122,36 +133,45 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.panel4.Controls.Add(this.CatPrCmb);
+            this.panel4.Controls.Add(this.pictureBox9);
+            this.panel4.Controls.Add(this.PaymentStatusCmb);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.CustAddTb);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.btnReset);
+            this.panel4.Controls.Add(this.TotalHargaTb);
+            this.panel4.Controls.Add(this.btnHapusTransaksi);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.btnAddBill);
+            this.panel4.Controls.Add(this.btnUpdateTransaksi);
             this.panel4.Controls.Add(this.QtyTb);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.PrNameTb);
-            this.panel4.Controls.Add(this.PrPriceTb);
+            this.panel4.Controls.Add(this.CustomerTb);
+            this.panel4.Controls.Add(this.ProdukNameTb);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(7, 319);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(812, 302);
             this.panel4.TabIndex = 30;
             // 
-            // CatPrCmb
+            // pictureBox9
             // 
-            this.CatPrCmb.FormattingEnabled = true;
-            this.CatPrCmb.Items.AddRange(new object[] {
-            "dikemas",
-            "perjalanan",
-            "sampai_tujuan"});
-            this.CatPrCmb.Location = new System.Drawing.Point(231, 91);
-            this.CatPrCmb.Name = "CatPrCmb";
-            this.CatPrCmb.Size = new System.Drawing.Size(194, 21);
-            this.CatPrCmb.TabIndex = 36;
+            this.pictureBox9.Location = new System.Drawing.Point(509, 4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(292, 288);
+            this.pictureBox9.TabIndex = 37;
+            this.pictureBox9.TabStop = false;
+            // 
+            // PaymentStatusCmb
+            // 
+            this.PaymentStatusCmb.FormattingEnabled = true;
+            this.PaymentStatusCmb.Items.AddRange(new object[] {
+            "pending",
+            "verified",
+            "rejected"});
+            this.PaymentStatusCmb.Location = new System.Drawing.Point(231, 91);
+            this.PaymentStatusCmb.Name = "PaymentStatusCmb";
+            this.PaymentStatusCmb.Size = new System.Drawing.Size(194, 21);
+            this.PaymentStatusCmb.TabIndex = 36;
             // 
             // CustAddTb
             // 
@@ -166,32 +186,33 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(464, 5);
+            this.label3.Location = new System.Drawing.Point(231, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 18);
             this.label3.TabIndex = 32;
             this.label3.Text = "Total Harga";
             // 
-            // textBox1
+            // TotalHargaTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(467, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 25);
-            this.textBox1.TabIndex = 31;
+            this.TotalHargaTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalHargaTb.Location = new System.Drawing.Point(234, 148);
+            this.TotalHargaTb.Name = "TotalHargaTb";
+            this.TotalHargaTb.Size = new System.Drawing.Size(178, 25);
+            this.TotalHargaTb.TabIndex = 31;
             // 
-            // btnReset
+            // btnHapusTransaksi
             // 
-            this.btnReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.Location = new System.Drawing.Point(157, 219);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnReset.Size = new System.Drawing.Size(113, 42);
-            this.btnReset.TabIndex = 29;
-            this.btnReset.Text = "Hapus";
-            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnHapusTransaksi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHapusTransaksi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHapusTransaksi.Location = new System.Drawing.Point(152, 236);
+            this.btnHapusTransaksi.Name = "btnHapusTransaksi";
+            this.btnHapusTransaksi.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnHapusTransaksi.Size = new System.Drawing.Size(113, 42);
+            this.btnHapusTransaksi.TabIndex = 29;
+            this.btnHapusTransaksi.Text = "Hapus";
+            this.btnHapusTransaksi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHapusTransaksi.UseVisualStyleBackColor = true;
+            this.btnHapusTransaksi.Click += new System.EventHandler(this.btnHapusTransaksi_Click);
             // 
             // label9
             // 
@@ -203,18 +224,19 @@
             this.label9.TabIndex = 30;
             this.label9.Text = "Nama Produk";
             // 
-            // btnAddBill
+            // btnUpdateTransaksi
             // 
-            this.btnAddBill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddBill.Location = new System.Drawing.Point(13, 219);
-            this.btnAddBill.Name = "btnAddBill";
-            this.btnAddBill.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAddBill.Size = new System.Drawing.Size(113, 42);
-            this.btnAddBill.TabIndex = 28;
-            this.btnAddBill.Text = "Konfirmasi";
-            this.btnAddBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAddBill.UseVisualStyleBackColor = true;
+            this.btnUpdateTransaksi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpdateTransaksi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateTransaksi.Location = new System.Drawing.Point(13, 236);
+            this.btnUpdateTransaksi.Name = "btnUpdateTransaksi";
+            this.btnUpdateTransaksi.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnUpdateTransaksi.Size = new System.Drawing.Size(113, 42);
+            this.btnUpdateTransaksi.TabIndex = 28;
+            this.btnUpdateTransaksi.Text = "Konfirmasi";
+            this.btnUpdateTransaksi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUpdateTransaksi.UseVisualStyleBackColor = true;
+            this.btnUpdateTransaksi.Click += new System.EventHandler(this.btnUpdateTransaksi_Click);
             // 
             // QtyTb
             // 
@@ -234,21 +256,21 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Quantity";
             // 
-            // PrNameTb
+            // CustomerTb
             // 
-            this.PrNameTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrNameTb.Location = new System.Drawing.Point(13, 26);
-            this.PrNameTb.Name = "PrNameTb";
-            this.PrNameTb.Size = new System.Drawing.Size(162, 25);
-            this.PrNameTb.TabIndex = 25;
+            this.CustomerTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerTb.Location = new System.Drawing.Point(13, 26);
+            this.CustomerTb.Name = "CustomerTb";
+            this.CustomerTb.Size = new System.Drawing.Size(162, 25);
+            this.CustomerTb.TabIndex = 25;
             // 
-            // PrPriceTb
+            // ProdukNameTb
             // 
-            this.PrPriceTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrPriceTb.Location = new System.Drawing.Point(188, 26);
-            this.PrPriceTb.Name = "PrPriceTb";
-            this.PrPriceTb.Size = new System.Drawing.Size(178, 25);
-            this.PrPriceTb.TabIndex = 23;
+            this.ProdukNameTb.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProdukNameTb.Location = new System.Drawing.Point(188, 26);
+            this.ProdukNameTb.Name = "ProdukNameTb";
+            this.ProdukNameTb.Size = new System.Drawing.Size(178, 25);
+            this.ProdukNameTb.TabIndex = 23;
             // 
             // label6
             // 
@@ -264,19 +286,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 70);
+            this.label1.Location = new System.Drawing.Point(407, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 19);
             this.label1.TabIndex = 22;
             this.label1.Text = "Data Transaksi";
             // 
-            // ProductsDGV
+            // TransaksiDGV
             // 
-            this.ProductsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductsDGV.Location = new System.Drawing.Point(3, 92);
-            this.ProductsDGV.Name = "ProductsDGV";
-            this.ProductsDGV.Size = new System.Drawing.Size(822, 221);
-            this.ProductsDGV.TabIndex = 4;
+            this.TransaksiDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TransaksiDGV.Location = new System.Drawing.Point(411, 92);
+            this.TransaksiDGV.Name = "TransaksiDGV";
+            this.TransaksiDGV.Size = new System.Drawing.Size(414, 221);
+            this.TransaksiDGV.TabIndex = 4;
+            this.TransaksiDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TransaksiDGV_CellClick);
             // 
             // panel2
             // 
@@ -306,6 +329,27 @@
             this.label2.Size = new System.Drawing.Size(161, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "ToKomp PC STORE";
+            // 
+            // EmpNameLbl
+            // 
+            this.EmpNameLbl.AutoSize = true;
+            this.EmpNameLbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpNameLbl.Location = new System.Drawing.Point(662, 24);
+            this.EmpNameLbl.Name = "EmpNameLbl";
+            this.EmpNameLbl.Size = new System.Drawing.Size(88, 19);
+            this.EmpNameLbl.TabIndex = 68;
+            this.EmpNameLbl.Text = "EmpName";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(744, 3);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(80, 55);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 67;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox18
             // 
@@ -357,17 +401,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(744, 3);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(80, 55);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 67;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
             // btnMenuProduk
             // 
             this.btnMenuProduk.Location = new System.Drawing.Point(46, 138);
@@ -377,16 +410,6 @@
             this.btnMenuProduk.Text = "Products";
             this.btnMenuProduk.UseVisualStyleBackColor = true;
             this.btnMenuProduk.Click += new System.EventHandler(this.btnMenuProduk_Click);
-            // 
-            // EmpNameLbl
-            // 
-            this.EmpNameLbl.AutoSize = true;
-            this.EmpNameLbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmpNameLbl.Location = new System.Drawing.Point(662, 24);
-            this.EmpNameLbl.Name = "EmpNameLbl";
-            this.EmpNameLbl.Size = new System.Drawing.Size(88, 19);
-            this.EmpNameLbl.TabIndex = 68;
-            this.EmpNameLbl.Text = "EmpName";
             // 
             // button1
             // 
@@ -511,6 +534,47 @@
             this.pictureBox3.TabIndex = 76;
             this.pictureBox3.TabStop = false;
             // 
+            // CustomerDGV
+            // 
+            this.CustomerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustomerDGV.Location = new System.Drawing.Point(7, 92);
+            this.CustomerDGV.Name = "CustomerDGV";
+            this.CustomerDGV.Size = new System.Drawing.Size(398, 221);
+            this.CustomerDGV.TabIndex = 31;
+            this.CustomerDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomerDGV_CellClick);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(11, 70);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 19);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Data Customer";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(131, 74);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(186, 13);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "*pilih customer untuk melihat transaksi";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(535, 74);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(216, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Seleksi baris dengan tanda panah ke kanan";
+            // 
             // Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,13 +609,14 @@
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductsDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransaksiDGV)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -559,6 +624,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -569,20 +635,20 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox CatPrCmb;
+        private System.Windows.Forms.ComboBox PaymentStatusCmb;
         private System.Windows.Forms.TextBox CustAddTb;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.TextBox TotalHargaTb;
+        private System.Windows.Forms.Button btnHapusTransaksi;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnAddBill;
+        private System.Windows.Forms.Button btnUpdateTransaksi;
         private System.Windows.Forms.TextBox QtyTb;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox PrNameTb;
-        private System.Windows.Forms.TextBox PrPriceTb;
+        private System.Windows.Forms.TextBox CustomerTb;
+        private System.Windows.Forms.TextBox ProdukNameTb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView ProductsDGV;
+        private System.Windows.Forms.DataGridView TransaksiDGV;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
@@ -606,5 +672,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView CustomerDGV;
+        private System.Windows.Forms.Label label11;
     }
 }

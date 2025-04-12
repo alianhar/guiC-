@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,129 @@ namespace toko_laptop_tugas
         {
             InitializeComponent();
             CustNameLbl.Text = Login.CustName;
+            loggedInCustomerId = Login.CustId;
+            DisplayAllDelivery();
+        }
+
+        SqlConnection Conn = new SqlConnection(DBConnection.ConnectionString);
+
+        private int loggedInCustomerId = 0; // ini di-set setelah login berhasil
+
+        private void DisplayDeliveryByStatus(string status)
+        {
+            try
+            {
+                if (Conn.State == ConnectionState.Closed)
+                    Conn.Open();
+
+                string query = @"
+                    SELECT 
+                        dt.TrackingId,
+                        e.EmpName AS [Diperbarui Oleh],
+                        b.BNum AS [No. Transaksi],
+                        b.BDate AS [Tanggal],
+                        b.CustName AS [Customer],
+                        p.PrName AS [Nama Produk],
+                        bd.Quantity AS [Jumlah],
+                        b.Amt AS [Total Bayar],
+                        b.DeliveryAddress AS [Alamat],
+                        b.DeliveryStatus,
+                        b.DeliveryFee,
+                        dt.Notes AS [Catatan]
+                    FROM 
+                        BillTbl b
+                    INNER JOIN 
+                        BillDetailTbl bd ON b.BNum = bd.BillId
+                    INNER JOIN 
+                        ProductTbl p ON bd.ProductId = p.PrId
+                    LEFT JOIN 
+                        DeliveryTrackingTbl dt ON dt.BillId = b.BNum
+                    LEFT JOIN 
+                        EmployeeTbl e ON dt.UpdatedBy = e.EmpNum 
+                    WHERE 
+                        b.CustId = @CustId 
+                        AND b.PaymentStatus = 'verified'
+                        AND b.DeliveryStatus = @Status
+                    ORDER BY 
+                        b.BDate DESC";
+
+                SqlCommand cmd = new SqlCommand(query, Conn);
+                cmd.Parameters.AddWithValue("@CustId", loggedInCustomerId); // dari variabel login
+                cmd.Parameters.AddWithValue("@Status", status);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                DeliveryDGV.DataSource = dt;
+                DeliveryDGV.Columns["TrackingId"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat data delivery: " + ex.Message);
+            }
+            finally
+            {
+                if (Conn.State == ConnectionState.Open)
+                    Conn.Close();
+            }
+        }
+
+
+        private void DisplayAllDelivery()
+        {
+            try
+            {
+                if (Conn.State == ConnectionState.Closed)
+                    Conn.Open();
+
+                string query = @"
+                SELECT 
+                    dt.TrackingId,
+                    e.EmpName AS [Diperbarui Oleh],
+                    b.BNum AS [No. Transaksi],
+                    b.BDate AS [Tanggal],
+                    b.CustName AS [Customer],
+                    p.PrName AS [Nama Produk],
+                    bd.Quantity AS [Jumlah],
+                    b.Amt AS [Total Bayar],
+                    b.DeliveryAddress AS [Alamat],
+                    b.DeliveryStatus,
+                    b.DeliveryFee,
+                    dt.Notes AS [Catatan]
+                FROM 
+                    BillTbl b
+                INNER JOIN 
+                    BillDetailTbl bd ON b.BNum = bd.BillId
+                INNER JOIN 
+                    ProductTbl p ON bd.ProductId = p.PrId
+                LEFT JOIN 
+                    DeliveryTrackingTbl dt ON dt.BillId = b.BNum
+                LEFT JOIN 
+                    EmployeeTbl e ON dt.UpdatedBy = e.EmpNum
+                WHERE 
+                    b.CustId = @CustId 
+                    AND b.PaymentStatus = 'verified'
+                ORDER BY 
+                    b.BDate DESC";
+
+                SqlCommand cmd = new SqlCommand(query, Conn);
+                cmd.Parameters.AddWithValue("@CustId", loggedInCustomerId);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                DeliveryDGV.DataSource = dt;
+                DeliveryDGV.Columns["TrackingId"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat data delivery: " + ex.Message);
+            }
+            finally
+            {
+                if (Conn.State == ConnectionState.Open)
+                    Conn.Close();
+            }
         }
 
 
@@ -67,5 +191,21 @@ namespace toko_laptop_tugas
             profileCustDelivery.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DisplayDeliveryByStatus("sampai_tujuan");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DisplayDeliveryByStatus("dalam_perjalanan");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DisplayDeliveryByStatus("dikemas");
+        }
+
     }
 }

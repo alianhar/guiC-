@@ -81,6 +81,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
+            this.btnDeleteBill = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -386,7 +387,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(178, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 634);
+            this.panel1.Size = new System.Drawing.Size(987, 634);
             this.panel1.TabIndex = 31;
             // 
             // label11
@@ -395,9 +396,9 @@
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(412, 372);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 19);
+            this.label11.Size = new System.Drawing.Size(176, 19);
             this.label11.TabIndex = 21;
-            this.label11.Text = "Transaksi";
+            this.label11.Text = "Transaksi Per Hari ini:";
             // 
             // TransactionsDGV
             // 
@@ -430,6 +431,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightCyan;
+            this.panel4.Controls.Add(this.btnDeleteBill);
             this.panel4.Controls.Add(this.TotalLbl);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.BillsDGV);
@@ -441,14 +443,14 @@
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Location = new System.Drawing.Point(12, 73);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(916, 290);
+            this.panel4.Size = new System.Drawing.Size(957, 290);
             this.panel4.TabIndex = 1;
             // 
             // TotalLbl
             // 
             this.TotalLbl.AutoSize = true;
             this.TotalLbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalLbl.Location = new System.Drawing.Point(681, 250);
+            this.TotalLbl.Location = new System.Drawing.Point(830, 253);
             this.TotalLbl.Name = "TotalLbl";
             this.TotalLbl.Size = new System.Drawing.Size(36, 19);
             this.TotalLbl.TabIndex = 30;
@@ -469,14 +471,15 @@
             this.BillsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BillsDGV.Location = new System.Drawing.Point(504, 33);
             this.BillsDGV.Name = "BillsDGV";
-            this.BillsDGV.Size = new System.Drawing.Size(409, 208);
+            this.BillsDGV.Size = new System.Drawing.Size(441, 208);
             this.BillsDGV.TabIndex = 28;
+            this.BillsDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BillsDGV_CellClick);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(640, 250);
+            this.label12.Location = new System.Drawing.Point(730, 253);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(35, 19);
             this.label12.TabIndex = 27;
@@ -496,10 +499,10 @@
             // 
             this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(517, 247);
+            this.btnPrint.Location = new System.Drawing.Point(493, 250);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnPrint.Size = new System.Drawing.Size(113, 26);
+            this.btnPrint.Size = new System.Drawing.Size(100, 26);
             this.btnPrint.TabIndex = 19;
             this.btnPrint.Text = "Print";
             this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -634,12 +637,26 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // btnDeleteBill
+            // 
+            this.btnDeleteBill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDeleteBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteBill.Location = new System.Drawing.Point(599, 250);
+            this.btnDeleteBill.Name = "btnDeleteBill";
+            this.btnDeleteBill.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDeleteBill.Size = new System.Drawing.Size(98, 26);
+            this.btnDeleteBill.TabIndex = 31;
+            this.btnDeleteBill.Text = "Hapus";
+            this.btnDeleteBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDeleteBill.UseVisualStyleBackColor = true;
+            this.btnDeleteBill.Click += new System.EventHandler(this.btnDeleteBill_Click);
+            // 
             // Billing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(1120, 653);
+            this.ClientSize = new System.Drawing.Size(1159, 653);
             this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox17);
@@ -749,5 +766,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnDeleteBill;
     }
 }
